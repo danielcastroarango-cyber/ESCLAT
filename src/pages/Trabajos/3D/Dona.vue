@@ -53,6 +53,9 @@ const siguientePaso = () => {
 </template>
 
 <style scoped>
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 @font-face {
   font-family: Geist;
   src: url('/fonts/Geist-VariableFont_wght.ttf') format('truetype');
@@ -75,7 +78,7 @@ const siguientePaso = () => {
 }
 
 .titulo-portada {
-  font-family: 'Unbounded', sans-serif; 
+  font-family: 'Anton', sans-serif; 
 }
 
 .habilidades {

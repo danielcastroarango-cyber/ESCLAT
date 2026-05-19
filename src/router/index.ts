@@ -2,15 +2,17 @@
 
 
 import Tickets from "@/pages/Trabajos/ilustracion/tickets.vue";
-import Modelado from "@/pages/Trabajos/3D/Modelado.vue";
+
 import { createRouter, createWebHashHistory } from "vue-router";
 
-import Dona from "@/pages/Trabajos/3D/Dona.vue";
+
 
 
 import Camaleon from "@/pages/Trabajos/3D/Camaleon.vue";
 import Info from "@/pages/Trabajos/diseno/Info.vue";
 import Lineup from "@/pages/Trabajos/Lineup/lineup.vue";
+import Programacion from "@/pages/Trabajos/3D/Programacion.vue";
+import Organizacion from "@/pages/Trabajos/3D/Organizacion.vue";
 
 
 export const router = createRouter({
@@ -45,16 +47,16 @@ export const router = createRouter({
       ]
     },
     {
-      path: "/3D",
+      path: "/programacion",
       children: [
         {
           path: "",
-          name: "3D",
-          component: Modelado,
+          name: "programacion",
+          component: Programacion,
         },
         {
-          path: "Dona",
-          component: Dona
+          path: "Organizacion",
+          component: Organizacion
         },
         {path: "Camaleon",
         component: Camaleon

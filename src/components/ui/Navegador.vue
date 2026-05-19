@@ -25,7 +25,7 @@
         },
         {
             label: 'PROGRAMACION',
-            to: { path: '/', hash: '#programacion' },
+            to: '/programacion',
         },
         {
             label: 'LINEUP',
