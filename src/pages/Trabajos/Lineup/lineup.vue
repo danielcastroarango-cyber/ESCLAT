@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import NavigatorPrimarius from '@/components/ui/Navegador.vue'
  import ArtistMap from '@/components/ui/ArtistMap.vue'
+ import Banner from '@/components/ui/Banner.vue'
 </script>
 
 <template>
   <div class="min-h-screen w-full bg-black text-white">
     <NavigatorPrimarius />
+    <Banner />
 
     <main class="relative overflow-hidden px-4 py-20 md:px-10 lg:px-14">
       <div

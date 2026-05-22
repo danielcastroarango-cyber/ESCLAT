@@ -1,5 +1,6 @@
 ﻿<script setup lang="ts">
 import { Button } from '@/components/ui/button'
+import Banner from '@/components/ui/Banner.vue'
 import CountdownPopup from '@/components/ui/CountdownPopup.vue'
 import Footer from '@/components/ui/Footer.vue'
 import NavigatorPrimarius from '@/components/ui/Navegador.vue'
@@ -31,8 +32,10 @@ const asciiTickets = String.raw`████████╗██╗ ███�
 
 <template>
   <div class="home-geist  min-h-screen w-full flex flex-col items-center justify-center  text-white">
+  
    <NavigatorPrimarius />
-   <CountdownPopup />
+    <Banner />
+   <CountdownPopup class="z-51" />
     
     <!-- <img class="absolute opacity-20" src="/imagines/tonitrui.png" alt=""> -->
     <section
@@ -41,15 +44,15 @@ const asciiTickets = String.raw`████████╗██╗ ███�
     >
       <div
         aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(28,255,47,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(28,255,47,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(28,255,47,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
+        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(198,255,51,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(198,255,51,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(198,255,51,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
       />
       <div
         aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(28,255,47,0.16),transparent_34%),linear-gradient(145deg,rgba(28,255,47,0.11),transparent_30%,rgba(28,255,47,0.08)_58%,transparent_84%)]"
+        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(198,255,51,0.16),transparent_34%),linear-gradient(145deg,rgba(198,255,51,0.11),transparent_30%,rgba(198,255,51,0.08)_58%,transparent_84%)]"
       />
 
       <div class="relative z-10 mx-auto flex w-full max-w-384 flex-col items-center px-2 text-center">
-        <p class="mb-8 text-xs font-bold uppercase tracking-[0.32em] text-[#1cff2f] md:text-sm">
+        <p class="mb-8 text-xs font-bold uppercase tracking-[0.32em] text-[#C6FF33] md:text-sm">
           Música / Arte / Performance
         </p>
 
@@ -57,7 +60,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
           <pre class="shrink-0 whitespace-pre text-left font-mono text-[0.34rem] font-bold leading-[1.05] text-white [text-shadow:0_0_22px_rgba(255,255,255,0.55)] sm:text-[0.58rem] md:text-[0.84rem] lg:text-[1.18rem] xl:text-[1.42rem] 2xl:text-[1.62rem]">{{ asciiTitle }}</pre>
           <pre
             aria-hidden="true"
-            class="shrink-0 whitespace-pre text-left font-mono text-[0.34rem] font-bold leading-[1.05] text-[#1cff2f] [text-shadow:0_0_22px_rgba(255,255,255,0.7)] sm:text-[0.58rem] md:text-[0.84rem] lg:text-[1.18rem] xl:text-[1.42rem] 2xl:text-[1.62rem]"
+            class="shrink-0 whitespace-pre text-left font-mono text-[0.34rem] font-bold leading-[1.05] text-[#C6FF33] [text-shadow:0_0_22px_rgba(255,255,255,0.7)] sm:text-[0.58rem] md:text-[0.84rem] lg:text-[1.18rem] xl:text-[1.42rem] 2xl:text-[1.62rem]"
           >{{ asciiStar }}</pre>
         </div>
 
@@ -71,7 +74,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
         as-child
         variant="outline"
         size="lg"
-        class="group absolute bottom-[clamp(1.5rem,4vw,2.75rem)] left-1/2 z-20 h-auto min-h-[clamp(4.25rem,8vw,8.5rem)] w-[calc(100vw-1.5rem)] max-w-368 -translate-x-1/2 overflow-hidden rounded-none border-2 border-white bg-transparent px-[clamp(0.5rem,2vw,2rem)] py-[clamp(0.9rem,2vw,1.75rem)] text-white shadow-[8px_8px_0_#ffffff] hover:-translate-y-1 hover:bg-transparent hover:border-[#1cff2f] hover:text-[#1cff2f] hover:shadow-[8px_8px_0_#1cff2f] sm:w-[94vw] md:w-[90vw] lg:w-[86vw] xl:w-[82vw] 2xl:w-[78vw]"
+        class="group absolute bottom-[clamp(1.5rem,4vw,2.75rem)] left-1/2 z-20 h-auto min-h-[clamp(4.25rem,8vw,8.5rem)] w-[calc(100vw-1.5rem)] max-w-368 -translate-x-1/2 overflow-hidden rounded-none border-2 border-white bg-transparent px-[clamp(0.5rem,2vw,2rem)] py-[clamp(0.9rem,2vw,1.75rem)] text-white shadow-[8px_8px_0_#ffffff] hover:-translate-y-1 hover:bg-transparent hover:border-[#C6FF33] hover:text-[#C6FF33] hover:shadow-[8px_8px_0_#C6FF33] sm:w-[94vw] md:w-[90vw] lg:w-[86vw] xl:w-[82vw] 2xl:w-[78vw]"
       >
         <RouterLink to="/tickets" aria-label="Tickets festival">
           <pre
@@ -100,17 +103,17 @@ const asciiTickets = String.raw`████████╗██╗ ███�
       </div>
     </section>
 
-    <section id="fecha" class="flex min-h-[32vh] w-full flex-col bg-black text-center md:min-h-[36vh]">
+    <section id="fecha" class=" mt-5 z-50 flex min-h-[32vh] w-full flex-col bg-black text-center md:min-h-[36vh]">
       <div class="grid min-h-[32vh] w-full grid-cols-1 md:min-h-[36vh] md:grid-cols-2">
-        <div class="flex h-full flex-col items-center justify-center border-b-5 border-r-3 border-[#1cff2f]  px-4 py-6  ">
-          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#1cff2f] md:text-xl">Fecha</span>
+        <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-r-3 border-[#C6FF33]  px-4 py-6  ">
+          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#C6FF33] md:text-xl">Fecha</span>
           <h1 class="titulo-portada mt-3 text-5xl font-bold leading-none text-white md:text-6xl lg:text-7xl">
             23 al 25 de octubre
           </h1>
         </div>
 
-        <div class="flex h-full flex-col items-center justify-center border-b-5 border-l-3 border-[#1cff2f] bg-black px-4 py-6">
-          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#1cff2f] md:text-xl">Lugar</span>
+        <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-l-3 border-[#C6FF33]  px-4 py-6">
+          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#C6FF33] md:text-xl">Lugar</span>
           <h1 class="titulo-portada mt-3 text-5xl font-bold leading-none text-white md:text-6xl lg:text-7xl">
             Las Naves, Valencia
           </h1>
@@ -121,15 +124,15 @@ const asciiTickets = String.raw`████████╗██╗ ███�
      <section id="lineup" class="relative w-full overflow-hidden bg-black px-4 py-24 text-white md:px-10 lg:px-14">
       <div
         aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(28,255,47,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(28,255,47,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(28,255,47,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
+        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(198,255,51,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(198,255,51,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(198,255,51,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
       />
       <div
         aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(28,255,47,0.16),transparent_34%),linear-gradient(145deg,rgba(28,255,47,0.11),transparent_30%,rgba(28,255,47,0.08)_58%,transparent_84%)]"
+        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(198,255,51,0.16),transparent_34%),linear-gradient(145deg,rgba(198,255,51,0.11),transparent_30%,rgba(198,255,51,0.08)_58%,transparent_84%)]"
       />
 
       <div class="relative z-10">
-        <p class="mb-5 text-sm font-bold uppercase tracking-[0.32em] text-[#1cff2f] md:text-base">
+        <p class="mb-5 text-sm font-bold uppercase tracking-[0.32em] text-[#C6FF33] md:text-base">
           Lineup
         </p>
         <h2 class="titulo-portada text-6xl font-bold leading-none md:text-8xl">
@@ -142,7 +145,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
             :key="artist"
             as-child
             variant="outline"
-            class="h-auto rounded-none border-2 border-white bg-transparent px-5 py-6 text-xl font-bold uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#fff] hover:-translate-y-1 hover:border-[#1cff2f] hover:bg-transparent hover:text-[#1cff2f] hover:shadow-[6px_6px_0_#1cff2f] md:text-2xl"
+            class="h-auto rounded-none border-2 border-white bg-transparent px-5 py-6 text-xl font-bold uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#fff] hover:-translate-y-1 hover:border-[#C6FF33] hover:bg-transparent hover:text-[#C6FF33] hover:shadow-[6px_6px_0_#C6FF33] md:text-2xl"
           >
             <RouterLink to="/lineup">
               {{ artist }}

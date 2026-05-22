@@ -8,11 +8,10 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 
 
-import Camaleon from "@/pages/Trabajos/3D/Camaleon.vue";
+
 import Info from "@/pages/Trabajos/diseno/Info.vue";
 import Lineup from "@/pages/Trabajos/Lineup/lineup.vue";
 import Programacion from "@/pages/Trabajos/3D/Programacion.vue";
-import Organizacion from "@/pages/Trabajos/3D/Organizacion.vue";
 
 
 export const router = createRouter({
@@ -56,11 +55,9 @@ export const router = createRouter({
         },
         {
           path: "Organizacion",
-          component: Organizacion
+          component: Programacion
         },
-        {path: "Camaleon",
-        component: Camaleon
-        }
+       
       ]
     },
     {

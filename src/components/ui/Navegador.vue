@@ -10,7 +10,7 @@
     /*  NavigationMenuViewport, */
     } from '@/components/ui/navigation-menu'
 
-    import { onMounted, onUnmounted, ref } from 'vue';
+    import { ref } from 'vue';
     import { useRoute } from 'vue-router'
 
     type NavigationItem = {
@@ -45,7 +45,7 @@
         return route.path === item.to.path && route.hash === item.to.hash
     }
 
-    const handleResize = () => {
+    /* const handleResize = () => {
         if (window.innerWidth <= 640) {
              videreMenu.value = false
         } else {
@@ -60,7 +60,7 @@
 
     onUnmounted(() => {
         window.removeEventListener('resize', handleResize)
-        })
+        }) */
 
 
     </script>
@@ -85,7 +85,7 @@
                 </RouterLink>
 
         <NavigationMenu class="w-full">
-            <NavigationMenuList class="nav-list">
+            <NavigationMenuList class="w-full max-[640px]:flex-col max-[640px]:items-stretch max-[640px]:gap-3 min-[641px]:flex-row min-[641px]:items-center min-[641px]:gap-4 md:gap-5 lg:gap-6 xl:gap-8 2xl:gap-10">
 
                  <NavigationMenuItem v-for="item in navigationItems" :key="item.label">
                     <RouterLink
@@ -171,15 +171,6 @@
     gap: 1rem;
     }
 
-    .nav-list {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    gap: 0.75rem;
-    }
-
     @media (max-width: 640px){
     .extra-nav {
         opacity: 1;
@@ -188,22 +179,10 @@
     
     }
 
-    @media (min-width: 640px) {
-    .nav-list {
-        flex-direction: row;
-        align-items: center;
-        gap: 2rem;
-    }
-    }
-
     @media (min-width: 768px){
     .extra-nav {
         opacity: 1;
         padding: 0.75rem 1.5rem;
-    }
-
-    .nav-list {
-        gap: 2.5rem;
     }
     
     }
@@ -215,24 +194,6 @@
         padding: 0.75rem 2rem;
     }
 
-    .nav-list {
-        gap: 4.5rem;
-    }
-    
-    }
-
-     @media (min-width: 1280px){
-    .nav-list {
-        gap: 7rem;
-    }
-    
-    }
-
-    @media (min-width: 1536px){
-    .nav-list {
-        gap: 9rem;
-    }
-    
     }
 
    
