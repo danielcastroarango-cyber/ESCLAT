@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Phone, Mail,  X, Linkedin, Instagram, MessageCircle } from 'lucide-vue-next'
+import {  X,  Instagram, MessageCircle } from 'lucide-vue-next'
 
 
 

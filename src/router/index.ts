@@ -1,7 +1,7 @@
 ﻿import Home from "@/pages/home/Home.vue";
 
 
-import Tickets from "@/pages/Trabajos/ilustracion/tickets.vue";
+import Tickets from "@/pages/Trabajos/Entradas/tickets.vue";
 
 import { createRouter, createWebHashHistory } from "vue-router";
 
@@ -9,9 +9,9 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 
 
-import Info from "@/pages/Trabajos/diseno/Info.vue";
+import Info from "@/pages/Trabajos/Normas/Info.vue";
 import Lineup from "@/pages/Trabajos/Lineup/lineup.vue";
-import Programacion from "@/pages/Trabajos/3D/Programacion.vue";
+import Programacion from "@/pages/Trabajos/programacion/Programacion.vue";
 
 
 export const router = createRouter({

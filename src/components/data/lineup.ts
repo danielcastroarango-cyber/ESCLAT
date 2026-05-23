@@ -4,7 +4,7 @@ export const lineup = [
     name: 'Luna Void',
     genre: 'Pop experimental',
     bio: 'Directo hipnótico mezclando voz, sintetizadores y performance visual.',
-    image: 'https://placehold.co/300x300/020204/00ffe1?text=Luna',
+    image: '/Imagines/ESCLAT/Artista.png',
     x: 25,
     y: 35
   },
@@ -13,7 +13,7 @@ export const lineup = [
     name: 'Noir System',
     genre: 'Techno industrial',
     bio: 'Sonido oscuro, mecánico y agresivo para escenarios nocturnos.',
-    image: 'https://placehold.co/300x300/020204/ff2bd6?text=Noir',
+    image: '/Imagines/ESCLAT/Artista.png',
     x: 55,
     y: 45
   },
@@ -22,7 +22,7 @@ export const lineup = [
     name: 'Marea Roja',
     genre: 'Art rock',
     bio: 'Banda cinematográfica que combina ruido, poesía y guitarras densas.',
-    image: 'https://placehold.co/300x300/020204/ffffff?text=Marea',
+    image: '/Imagines/ESCLAT/Artista.png',
     x: 42,
     y: 80
   },
@@ -30,8 +30,8 @@ export const lineup = [
     id: 4,
     name: 'Medico',
     genre: 'Ambient Techno',
-    bio: 'Banda cinematográfica que combina ruido, poesía y guitarras densas.',
-    image: 'https://placehold.co/300x300/020204/ffffff?text=Medico',
+    bio: 'Musica suave y tranquila para ambieentar tus decansos y momentos de relajacion.',
+    image: '/Imagines/ESCLAT/Artista.png',
     x: 70,
     y: 25
   },
@@ -39,8 +39,8 @@ export const lineup = [
     id: 5,
     name: 'Funk Tribu',
     genre: 'nu-trance',
-    bio: 'Directo hipnótico mezclando voz, sintetizadores y performance visual.',
-    image: 'https://placehold.co/300x300/020204/00ffe1?text=Funk',
+    bio: 'Conocido por combinar sonidos retro-futristicos con grooves hipnoticos y visuales etereos.',
+    image: '/Imagines/ESCLAT/Artista.png',
     x: 15,
     y: 70
   },
@@ -48,8 +48,8 @@ export const lineup = [
     id: 6,
     name: 'Dj pastis',
     genre: 'Schranz',
-    bio: 'Sonido oscuro, mecánico y agresivo para escenarios nocturnos.',
-    image: 'https://placehold.co/300x300/020204/ff2bd6?text=Pastis',
+    bio: 'Quien mueve de verdad la noche con su sus sonidos y duros y llenos de energia para dorlo todo en la pista.',
+    image: '/Imagines/ESCLAT/Artista.png',
     x: 70,
     y: 65
   },
