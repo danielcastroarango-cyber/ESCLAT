@@ -5,23 +5,6 @@ import CountdownPopup from '@/components/ui/CountdownPopup.vue'
 import Footer from '@/components/ui/Footer.vue'
 import NavigatorPrimarius from '@/components/ui/Navegador.vue'
 
-const asciiTitle = String.raw`███████╗███████╗ ██████╗██╗      █████╗ ████████╗
-██╔════╝██╔════╝██╔════╝██║     ██╔══██╗╚══██╔══╝
-█████╗  ███████╗██║     ██║     ███████║   ██║
-██╔══╝  ╚════██║██║     ██║     ██╔══██║   ██║
-███████╗███████║╚██████╗███████╗██║  ██║   ██║
-╚══════╝╚══════╝ ╚═════╝╚══════╝╚═╝  ╚═╝   ╚═╝`
-
-const asciiStar = String.raw`       *
-    *  |  *
- * ----+---- *
-     \ | /
-  -----+-----
-     / | \
- * ----+---- *
-    *  |  *
-       *`
-
 const asciiTickets = String.raw`████████╗██╗ ██████╗██╗  ██╗███████╗████████╗███████╗    ███████╗███████╗███████╗████████╗██╗██╗   ██╗ █████╗ ██╗
 ╚══██╔══╝██║██╔════╝██║ ██╔╝██╔════╝╚══██╔══╝██╔════╝    ██╔════╝██╔════╝██╔════╝╚══██╔══╝██║██║   ██║██╔══██╗██║
    ██║   ██║██║     █████╔╝ █████╗     ██║   ███████╗    █████╗  █████╗  ███████╗   ██║   ██║██║   ██║███████║██║
@@ -40,7 +23,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
     <!-- <img class="absolute opacity-20" src="/imagines/tonitrui.png" alt=""> -->
     <section
       id="home"
-      class="relative flex min-h-[78vh] w-full items-center justify-center overflow-hidden bg-black px-4 pb-40 pt-20 text-white md:min-h-[86vh] md:pb-48 lg:min-h-screen"
+      class="relative flex min-h-[78vh] w-full items-center justify-center overflow-visible bg-black px-4 pb-40 pt-20 text-white md:min-h-[86vh] md:pb-48 lg:min-h-screen"
     >
       <div
         aria-hidden="true"
@@ -56,12 +39,12 @@ const asciiTickets = String.raw`████████╗██╗ ███�
           Música / Arte / Performance
         </p>
 
-        <div class="flex max-w-full items-center justify-center gap-2 overflow-hidden sm:gap-5 md:gap-8 lg:gap-10 xl:gap-12">
-          <pre class="shrink-0 whitespace-pre text-left font-mono text-[0.34rem] font-bold leading-[1.05] text-white [text-shadow:0_0_22px_rgba(255,255,255,0.55)] sm:text-[0.58rem] md:text-[0.84rem] lg:text-[1.18rem] xl:text-[1.42rem] 2xl:text-[1.62rem]">{{ asciiTitle }}</pre>
-          <pre
-            aria-hidden="true"
-            class="shrink-0 whitespace-pre text-left font-mono text-[0.34rem] font-bold leading-[1.05] text-[#C6FF33] [text-shadow:0_0_22px_rgba(255,255,255,0.7)] sm:text-[0.58rem] md:text-[0.84rem] lg:text-[1.18rem] xl:text-[1.42rem] 2xl:text-[1.62rem]"
-          >{{ asciiStar }}</pre>
+        <div class="flex max-w-full items-center justify-center gap-2 overflow-visible px-4 py-4 sm:gap-5 md:gap-8 lg:gap-10 xl:gap-12">
+          <img
+            src="/Imagines/ESCLAT/ESCLATLOGO.png"
+            alt="ESCLAT"
+            class="home-logo w-[min(96vw,72rem)] object-contain"
+          >
         </div>
 
         <p class="mt-8 max-w-3xl text-base font-medium leading-relaxed text-white/85 md:text-xl lg:text-2xl">
@@ -93,7 +76,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
       >
       <div class="relative z-10 flex w-full flex-col items-center justify-center px-6 text-center">
         <img
-          src="/Imagines/ESCLAT/Estrella%20blanca.png"
+          src="/Imagines/ESCLAT/estrella.png"
           alt=""
           class="mb-12 w-72 object-contain md:w-md lg:w-160"
         >
@@ -190,6 +173,12 @@ const asciiTickets = String.raw`████████╗██╗ ███�
 .titulo-portada {
   font-family: 'Anton', sans-serif;
   font-weight: 400;
+}
+
+.home-logo {
+  filter:
+    drop-shadow(0 0 14px rgba(198, 255, 51, 0.56))
+    drop-shadow(0 0 34px rgba(255, 255, 255, 0.26));
 }
 
 .habilidades {

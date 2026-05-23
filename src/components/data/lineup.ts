@@ -4,7 +4,7 @@ export const lineup = [
     name: 'Luna Void',
     genre: 'Pop experimental',
     bio: 'Directo hipnótico mezclando voz, sintetizadores y performance visual.',
-    image: '/Imagines/ESCLAT/Artista.png',
+    image: '/Imagines/ESCLAT/estrella.png',
     x: 25,
     y: 35
   },
@@ -13,7 +13,7 @@ export const lineup = [
     name: 'Noir System',
     genre: 'Techno industrial',
     bio: 'Sonido oscuro, mecánico y agresivo para escenarios nocturnos.',
-    image: '/Imagines/ESCLAT/Artista.png',
+    image: '/Imagines/ESCLAT/estrella.png',
     x: 55,
     y: 45
   },
@@ -22,7 +22,7 @@ export const lineup = [
     name: 'Marea Roja',
     genre: 'Art rock',
     bio: 'Banda cinematográfica que combina ruido, poesía y guitarras densas.',
-    image: '/Imagines/ESCLAT/Artista.png',
+    image: '/Imagines/ESCLAT/estrella.png',
     x: 42,
     y: 80
   },
@@ -31,7 +31,7 @@ export const lineup = [
     name: 'Medico',
     genre: 'Ambient Techno',
     bio: 'Musica suave y tranquila para ambieentar tus decansos y momentos de relajacion.',
-    image: '/Imagines/ESCLAT/Artista.png',
+    image: '/Imagines/ESCLAT/estrella.png',
     x: 70,
     y: 25
   },
@@ -40,7 +40,7 @@ export const lineup = [
     name: 'Funk Tribu',
     genre: 'nu-trance',
     bio: 'Conocido por combinar sonidos retro-futristicos con grooves hipnoticos y visuales etereos.',
-    image: '/Imagines/ESCLAT/Artista.png',
+    image: '/Imagines/ESCLAT/estrella.png',
     x: 15,
     y: 70
   },
@@ -49,7 +49,7 @@ export const lineup = [
     name: 'Dj pastis',
     genre: 'Schranz',
     bio: 'Quien mueve de verdad la noche con su sus sonidos y duros y llenos de energia para dorlo todo en la pista.',
-    image: '/Imagines/ESCLAT/Artista.png',
+    image: '/Imagines/ESCLAT/estrella.png',
     x: 70,
     y: 65
   },

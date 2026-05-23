@@ -4,13 +4,6 @@ import Footer from '@/components/ui/Footer.vue'
 import NavigatorPrimarius from '@/components/ui/Navegador.vue'
 import Banner from '@/components/ui/Banner.vue'
 
-const asciiTitle = String.raw`███████╗███████╗ ██████╗██╗      █████╗ ████████╗
-██╔════╝██╔════╝██╔════╝██║     ██╔══██╗╚══██╔══╝
-█████╗  ███████╗██║     ██║     ███████║   ██║
-██╔══╝  ╚════██║██║     ██║     ██╔══██║   ██║
-███████╗███████║╚██████╗███████╗██║  ██║   ██║
-╚══════╝╚══════╝ ╚═════╝╚══════╝╚═╝  ╚═╝   ╚═╝`
-
 const asciiStar = String.raw`       *
     *  |  *
  * ----+---- *
@@ -63,7 +56,7 @@ const eventDetails = [
     <NavigatorPrimarius />
     <Banner />
 
-    <main class="relative flex w-full flex-1 flex-col items-center overflow-hidden bg-black text-white">
+    <main class="relative flex w-full flex-1 flex-col items-center overflow-visible bg-black text-white">
       <div
         aria-hidden="true"
         class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(198,255,51,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(198,255,51,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(198,255,51,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
@@ -75,15 +68,16 @@ const eventDetails = [
 
       <section
         id="home"
-        class="relative z-10 flex min-h-[58vh] w-full items-center justify-center overflow-hidden px-4 py-20 text-white md:min-h-[64vh] lg:min-h-[70vh]"
+        class="relative z-10 flex min-h-[58vh] w-full items-center justify-center overflow-visible px-4 py-20 text-white md:min-h-[64vh] lg:min-h-[70vh]"
       >
         <div class="mx-auto flex w-full max-w-384 flex-col items-center px-2 text-center">
-          <div class="flex max-w-full items-center justify-center gap-2 overflow-hidden sm:gap-5 md:gap-8 lg:gap-10 xl:gap-12">
-            <pre class="shrink-0 whitespace-pre text-left font-mono text-[0.34rem] font-bold leading-[1.05] text-[#C6FF33] [text-shadow:0_0_22px_rgba(198,255,51,0.55)] sm:text-[0.58rem] md:text-[0.84rem] lg:text-[1.18rem] xl:text-[1.42rem] 2xl:text-[1.62rem]">{{ asciiTitle }}</pre>
-            <pre
-              aria-hidden="true"
-              class="shrink-0 whitespace-pre text-left font-mono text-[0.34rem] font-bold leading-[1.05] text-[#C6FF33] [text-shadow:0_0_22px_rgba(198,255,51,0.7)] sm:text-[0.58rem] md:text-[0.84rem] lg:text-[1.18rem] xl:text-[1.42rem] 2xl:text-[1.62rem]"
-            >{{ asciiStar }}</pre>
+          <div class="flex max-w-full items-center justify-center gap-2 overflow-visible p-8 sm:gap-5 md:gap-8 lg:gap-10 xl:gap-12">
+            <img
+              src="/Imagines/ESCLAT/ESCLATLOGO_Verde.png"
+              alt="ESCLAT"
+              class="h-auto w-[min(88vw,64rem)] shrink-0 drop-shadow-[0_0_22px_rgba(198,255,51,0.55)]"
+            >
+            
           </div>
         </div>
       </section>
