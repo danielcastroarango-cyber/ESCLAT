@@ -93,9 +93,9 @@
                         @click="selectedItem = item.label"
                     >
                         <NavigationMenuLink :class="[
-                            'inline-flex h-auto min-h-9 w-full min-w-32 items-center justify-center rounded-none border-2 border-[#1cff2f] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em]  transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#1cff2f] hover:text-black hover:shadow-[5px_5px_0_#000] focus-visible:ring-2 focus-visible:ring-black focus-visible:outline-none md:min-h-10 md:px-5 md:py-2.5 2xl:min-w-44 2xl:px-8',
+                            'inline-flex h-auto min-h-9 w-full min-w-32 items-center justify-center rounded-none border-2 border-[#c6ff33] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em]  transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#c6ff33] hover:text-black hover:shadow-[5px_5px_0_#000] focus-visible:ring-2 focus-visible:ring-black focus-visible:outline-none md:min-h-10 md:px-5 md:py-2.5 2xl:min-w-44 2xl:px-8',
                             isActiveItem(item) || selectedItem === item.label
-                              ? 'bg-[#1cff2f] text-black'
+                              ? 'bg-[#c6ff33] text-black'
                               : 'bg-black text-white'
                           ]">
                             {{item.label}}
@@ -148,7 +148,7 @@
     }
 
     .language-label {
-    color: #1cff2f;
+    color: #c6ff33;
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 1;
@@ -158,7 +158,7 @@
     .extra-nav {
     width: 100%;
     background-color: #000000;
-    border-bottom: 5px solid #1cff2f;
+    border-bottom: 5px solid #c6ff33;
     }
 
     .nav-content {

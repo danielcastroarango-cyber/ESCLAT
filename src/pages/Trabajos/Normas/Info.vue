@@ -68,7 +68,7 @@ const faqs = [
     <main class="flex w-full flex-1 flex-col items-center justify-center gap-12 bg-black text-white">
     <div class="flex w-full flex-col gap-15 justify-center items-start">
       <div class="my-8 w-full max-w-350 px-4 text-left md:px-10 lg:px-14">
-        <h1 class="titulo-portada text-7xl md:text-9xl  text-left md:my-20 mb-10 text-white">
+        <h1 class="titulo-portada text-7xl md:text-9xl  text-left md:my-20 mb-10 text-[#c6ff33]">
           Normas
         </h1>
         <p class="text-left text-xl md:text-3xl text-white">
@@ -82,10 +82,10 @@ const faqs = [
         <Card
           v-for="rule in rules"
           :key="rule.title"
-          class="h-full rounded-none border-2 border-[#1cff2f] bg-black text-white shadow-[6px_6px_0_#1cff2f] "
+          class="h-full rounded-none border-2 border-[#7d39eb] bg-black text-white shadow-[6px_6px_0_#7d39eb] "
         >
           <CardHeader class="px-5 pb-0">
-            <CardTitle class="titulo-portada text-3xl font-normal leading-none md:text-4xl">
+            <CardTitle class="titulo-portada  text-[#c6ff33] text-3xl font-normal leading-none md:text-4xl">
               {{ rule.title }}
             </CardTitle>
           </CardHeader>
@@ -107,8 +107,8 @@ const faqs = [
         referrerpolicy="no-referrer-when-downgrade"
       />
 
-      <div class="flex min-h-[35vh] flex-col justify-center  border-[#1cff2f] px-6 py-12 text-left lg:min-h-screen lg:border-l-5 lg:border-t-0 lg:px-12">
-        <h2 class="titulo-portada text-5xl font-bold leading-none text-white md:text-7xl lg:text-8xl">
+      <div class="flex min-h-[35vh] flex-col justify-center  border-[#7d39eb] px-6 py-12 text-left lg:min-h-screen lg:border-l-5 lg:border-t-0 lg:px-12">
+        <h2 class="titulo-portada text-5xl font-bold leading-none text-[#c6ff33] md:text-7xl lg:text-8xl">
           Donde nos ubicamos
         </h2>
         <p class="mt-8 max-w-xl text-xl font-medium leading-relaxed text-white md:text-3xl">
@@ -119,16 +119,16 @@ const faqs = [
 
     <section id="faqs" class="w-full bg-black px-4 py-20  md:px-10 lg:px-14">
       <div class="w-full max-w-9xl">
-        <h2 class="titulo-portada mb-10 text-left text-white text-6xl font-bold leading-none md:text-8xl">
+        <h2 class="titulo-portada mb-10 text-left text-[#c6ff33] text-6xl font-bold leading-none md:text-8xl">
           FAQ´S
         </h2>
 
-        <Accordion type="single" collapsible class="w-full border-t-2 border-[#1cff2f]">
+        <Accordion type="single" collapsible class="w-full border-t-2 border-[#7d39eb]">
           <AccordionItem
             v-for="faq in faqs"
             :key="faq.question"
             :value="faq.question"
-            class="border-b-2 border-[#1cff2f]"
+            class="border-b-2 border-[#7d39eb]"
           >
             <AccordionTrigger class="py-6 text-left text-xl font-bold uppercase tracking-[0.08em] text-white hover:no-underline md:text-2xl">
               {{ faq.question }}
