@@ -88,14 +88,14 @@ const asciiTickets = String.raw`████████╗██╗ ███�
 
     <section id="fecha" class=" mt-5 z-50 flex min-h-[32vh] w-full flex-col bg-black text-center md:min-h-[36vh]">
       <div class="grid min-h-[32vh] w-full grid-cols-1 md:min-h-[36vh] md:grid-cols-2">
-        <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-r-3 border-[#C6FF33]  px-4 py-6  ">
+        <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-r-3 border-[#7d39eb]  px-4 py-6  ">
           <span class="text-base font-bold uppercase tracking-[0.2em] text-[#C6FF33] md:text-xl">Fecha</span>
           <h1 class="titulo-portada mt-3 text-5xl font-bold leading-none text-white md:text-6xl lg:text-7xl">
             23 al 25 de octubre
           </h1>
         </div>
 
-        <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-l-3 border-[#C6FF33]  px-4 py-6">
+        <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-l-3 border-[#7d39eb]  px-4 py-6">
           <span class="text-base font-bold uppercase tracking-[0.2em] text-[#C6FF33] md:text-xl">Lugar</span>
           <h1 class="titulo-portada mt-3 text-5xl font-bold leading-none text-white md:text-6xl lg:text-7xl">
             Las Naves, Valencia
@@ -118,7 +118,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
         <p class="mb-5 text-sm font-bold uppercase tracking-[0.32em] text-[#C6FF33] md:text-base">
           Lineup
         </p>
-        <h2 class="titulo-portada text-6xl font-bold leading-none md:text-8xl">
+        <h2 class="titulo-portada  text-6xl font-bold leading-none md:text-8xl">
           Artistas confirmados
         </h2>
 
@@ -128,7 +128,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
             :key="artist"
             as-child
             variant="outline"
-            class="h-auto rounded-none border-2 border-white bg-transparent px-5 py-6 text-xl font-bold uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#fff] hover:-translate-y-1 hover:border-[#C6FF33] hover:bg-transparent hover:text-[#C6FF33] hover:shadow-[6px_6px_0_#C6FF33] md:text-2xl"
+            class="h-auto rounded-none border-2 border-[#C6FF33] bg-transparent px-5 py-6 text-xl font-bold uppercase tracking-[0.12em] text-[#C6FF33] shadow-[6px_6px_0_#C6FF33]] hover:-translate-y-1 hover:border-[#7d39eb] hover:bg-transparent hover:text-[#7d39eb] hover:shadow-[6px_6px_0_#7d39eb] md:text-2xl"
           >
             <RouterLink to="/lineup">
               {{ artist }}

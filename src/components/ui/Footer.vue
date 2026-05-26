@@ -7,31 +7,46 @@ import {  X,  Instagram, MessageCircle } from 'lucide-vue-next'
 
 <template>
     <div>
-        <footer class="w-full border-t-5 border-[#1cff2f] bg-black text-white py-12 px-6">
+        <footer class="w-full border-t-5 border-[#c6ff33] bg-black text-center text-white py-8 px-5">
 
         
          <img
+            src="/Imagines/ESCLAT/Diputació de València.png"
+            alt="Diputació de València"
+            class="mx-8 mb-1 inline-block h-48 w-48 object-contain align-middle md:mx-12 md:mb-5 md:h-64 md:w-64"
+         />
+         <img
             src="/Imagines/ESCLAT/LOGO_LN.png"
             alt="Logo LN"
-            class="mx-auto mb-6 h-24 w-auto"
+            class="mx-8 mb-1 inline-block h-80 w-80 object-contain align-middle md:mx-12 md:mb-5 md:h-[28rem] md:w-[28rem]"
+         />
+         <img
+            src="/Imagines/ESCLAT/Cerveza-turia.png"
+            alt="Cerveza Turia"
+            class="mx-8 mb-5 inline-block h-40 w-40 object-contain align-middle md:mx-12 md:h-52 md:w-52"
+         />
+         <img
+            src="/Imagines/ESCLAT/Coca-cola.png"
+            alt="Coca-Cola"
+            class="mx-8 mb-5 inline-block h-48 w-48 object-contain align-middle md:mx-12 md:h-64 md:w-64"
          />
 
          
-            <h1 class="titulo-portada text-left text-6xl font-bold mb-10  transform-gpu text-[#1cff2f] duration-300 ease-out">Contácto</h1>
+            <h1 class="titulo-portada text-left text-6xl font-bold mb-10  transform-gpu text-[#c6ff33] duration-300 ease-out">Contácto</h1>
     
 
-            <div class="grid w-full grid-cols-1 gap-8 md:grid-cols-3">
+            <div class="grid w-full min-w-0 grid-cols-1 gap-8 text-left md:grid-cols-[minmax(0,1fr)_minmax(12rem,18rem)] md:items-start">
 
                 
 
-            <div class="space-y-4 text-left">
+            <div class="min-w-0 space-y-4 text-left">
 
                 
 
                 <h3 class="text-xl font-bold text-white/75">Información de Contacto</h3>
                     
                 <div class="space-y-2">
-                    <p class=" titulo-portada text-left text-5xl font-bold mb-10  transform-gpu text-white duration-300 ease-out">
+                    <p class=" titulo-portada mb-6 max-w-full break-words text-left text-4xl font-bold leading-tight transform-gpu text-white duration-300 ease-out md:text-5xl">
                    
 
                     info@esclatfestival.com
@@ -43,9 +58,9 @@ import {  X,  Instagram, MessageCircle } from 'lucide-vue-next'
                 </div>
 
                 <!-- Redes sociales -->
-                <div class="space-y-4   text-white/75">
+                <div class="min-w-0 space-y-4 text-white/75">
                 <h3 class="text-xl font-bold ">Sígue nuestras redes</h3>
-                <div class="flex gap-8  text-[#1cff2f]">
+                <div class="flex flex-wrap gap-8 text-[#c6ff33]">
                 
                     <X class="  w-10 h-10 hover:scale-125 transition-colors" />       
                     

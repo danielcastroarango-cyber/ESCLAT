@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative z-[60] w-full overflow-hidden border-b-2 border-black bg-[#1cff2f] py-2 text-black"
+    class="relative z-[60] w-full overflow-hidden border-b-2 border-black bg-[#c6ff33] py-2 text-black"
     aria-label="ULTIMAS EARLYBIRDS"
   >
     <div class="flex w-max whitespace-nowrap animate-[earlybirds-marquee_16s_linear_infinite]">
