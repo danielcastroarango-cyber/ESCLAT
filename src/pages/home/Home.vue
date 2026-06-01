@@ -94,7 +94,7 @@ import NavigatorPrimarius from '@/components/ui/Navegador.vue'
         </div>
 
         <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-l-3 border-[#7d39eb]  px-4 py-6">
-          <span class="text-base  uppercase tracking-[0.2em] text-[#7d39eb] md:text-xl">Lugar</span>
+          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#7d39eb] md:text-xl">Lugar</span>
           <h1 class="titulo-portada mt-3 text-5xl  leading-none  md:text-6xl lg:text-7xl">
             Las Naves, Valencia
           </h1>
