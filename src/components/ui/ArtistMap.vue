@@ -80,7 +80,7 @@ const stopPan = (event: PointerEvent) => {
 <template>
   <div
     ref="mapWindow"
-    class="artist-map relative h-[75vh] min-h-[30rem] w-full overflow-auto border-2 border-[#c6ff33] bg-transparent shadow-[6px_6px_0_#c6ff33]"
+    class="artist-map relative h-[75vh] min-h-[30rem] w-full overflow-auto border-2 border-[#7d39eb] bg-transparent shadow-[6px_6px_0_#7d39eb] focus:outline-none"
     :class="{ 'artist-map--panning': isPanning }"
     tabindex="0"
     aria-label="Mapa desplazable de artistas"
@@ -154,7 +154,7 @@ const stopPan = (event: PointerEvent) => {
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Impact', sans-serif;
   font-weight: 400;
 }
 
@@ -236,7 +236,7 @@ const stopPan = (event: PointerEvent) => {
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #c6ff33;
+  color: #7d39eb;
 }
 
 .artist-card__bio {

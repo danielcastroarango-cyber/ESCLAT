@@ -97,7 +97,7 @@ import {  X,  Instagram, MessageCircle } from 'lucide-vue-next'
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Impact', sans-serif;
   font-weight: 400;
 }
 

@@ -65,6 +65,10 @@ const eventDetails = [
         aria-hidden="true"
         class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(198,255,51,0.16),transparent_34%),linear-gradient(145deg,rgba(198,255,51,0.11),transparent_30%,rgba(198,255,51,0.08)_58%,transparent_84%)]"
       />
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_18%,rgba(125,57,235,0.26),transparent_34%),linear-gradient(215deg,transparent_12%,rgba(125,57,235,0.14)_48%,transparent_76%)]"
+      />
 
       <section
         id="home"
@@ -84,7 +88,7 @@ const eventDetails = [
 
       <section id="tickets" class="relative z-10 w-full px-4 pb-24 md:px-10 lg:px-14">
         <div class="mb-10 w-full text-left">
-          <p class="text-sm font-bold uppercase tracking-[0.32em] text-[#C6FF33] md:text-base">
+          <p class="text-sm font-bold uppercase tracking-[0.32em] text-[#7d39eb] md:text-base">
             Entradas
           </p>
           <h2 class="titulo-portada mt-4 text-6xl  leading-none text-white md:text-8xl">
@@ -114,7 +118,7 @@ const eventDetails = [
       </section>
 
        <section id="about" class="relative z-10 w-full px-4 pb-28 pt-8 text-left md:px-10 lg:px-14 mt-20">
-     <p class="text-sm font-bold uppercase tracking-[0.32em] mb-5 text-[#C6FF33] md:text-base">
+     <p class="text-sm font-bold uppercase tracking-[0.32em] mb-5 text-[#7d39eb] md:text-base">
             sobre esclat
           </p>
       <h2 class="titulo-portada  text-6xl font-normal leading-none text-white md:text-7xl lg:text-6xl">Una noche de ruptura</h2>
@@ -123,7 +127,7 @@ const eventDetails = [
        ESCLAT se transforma en un refugio para quienes buscan desaparecer de las normas y encontrarse de verdad. Un lugar donde la noche no exige máscaras, donde cada cuerpo, cada look y cada forma de sentir tiene cabida. Aquí no existe el juicio: existe la LIBERTAD. La estética mezcla la energía de los 90, el imaginario industrial berlinés y la irreverencia valenciana. Luces frías, neón, metal, humo, trance y caos bonito. Un universo donde lo underground se convierte en hogar y donde lo diferente no solo se acepta: se celebra. ESCLAT no es solo un festival sino un espacio de liberación colectiva. Un punto de encuentro para almas intensas y auténticas. Durante unas horas, todo explota: la música, la identidad y el deseo de expresarse sin filtros. Las actividades interactivas y  las conversaciones hacen de este festival un lugar mágico 
 Porque en ESCLAT nadie viene a encajar la gente viene a ser.
       </p>
-      <div id="requerimientos" class="mt-12 grid w-full grid-cols-1 gap-6 border-t-2 border-[#C6FF33] pt-8 text-white/85 md:grid-cols-3">
+      <div id="requerimientos" class="mt-12 grid w-full grid-cols-1 gap-6 border-t-2 border-[#7d39eb] pt-8 text-white/85 md:grid-cols-3">
         <div
           v-for="detail in eventDetails"
           :key="detail.title"
@@ -144,7 +148,7 @@ Porque en ESCLAT nadie viene a encajar la gente viene a ser.
 
       
      <section id="mapa" class="relative z-10 w-full px-4 py-20 text-white md:px-10 lg:px-14">
-      <div class="grid min-h-[82vh] w-full grid-cols-1 overflow-hidden rounded-none border-2 border-[#C6FF33] bg-transparent text-white shadow-[6px_6px_0_#C6FF33] transition-all duration-300 ease-out hover:-translate-y-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.65fr)]">
+      <div class="grid min-h-[82vh] w-full grid-cols-1 overflow-hidden rounded-none border-2 border-[#C6FF33] bg-transparent text-white shadow-[6px_6px_0_#7d39eb] transition-all duration-300 ease-out hover:-translate-y-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.65fr)]">
       <iframe
         title="Mapa de Las Naves, Valencia"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2599.603068669508!2d-0.34166637408784967!3d39.4591461749516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048f63da49ce1%3A0x37b1bcba9ad9547a!2sLas%20Naves%20%7C%20Centro%20de%20innovaci%C3%B3n%20social%20y%20urbana!5e1!3m2!1ses-419!2ses!4v1778776187665!5m2!1ses-419!2ses" 
@@ -154,7 +158,7 @@ Porque en ESCLAT nadie viene a encajar la gente viene a ser.
       />
 
       <div class="flex min-h-[35vh] flex-col justify-center border-t-2 border-[#C6FF33] px-6 py-12 text-left lg:min-h-full lg:border-l-2 lg:border-t-0 lg:px-12">
-        <h2 class="titulo-portada text-5xl font-bold leading-none text-white md:text-7xl lg:text-8xl">
+        <h2 class="titulo-portada text-5xl  leading-none text-white md:text-7xl lg:text-8xl">
           Donde nos ubicamos
         </h2>
         <p class="mt-8 max-w-xl text-xl font-medium leading-relaxed text-white/85 md:text-3xl">
@@ -190,14 +194,15 @@ Porque en ESCLAT nadie viene a encajar la gente viene a ser.
 }
 
 .home-geist {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 }
 
 .titulo-portada {
-  font-family: 'Anton', 'Unbounded', sans-serif;
+  font-family: 'Impact', 'Unbounded', sans-serif;
 }
 
 .habilidades {
   font-family: 'Unbounded', sans-serif;
 }
+
 </style>

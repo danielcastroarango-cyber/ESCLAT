@@ -4,13 +4,6 @@ import Banner from '@/components/ui/Banner.vue'
 import CountdownPopup from '@/components/ui/CountdownPopup.vue'
 import Footer from '@/components/ui/Footer.vue'
 import NavigatorPrimarius from '@/components/ui/Navegador.vue'
-
-const asciiTickets = String.raw`████████╗██╗ ██████╗██╗  ██╗███████╗████████╗███████╗    ███████╗███████╗███████╗████████╗██╗██╗   ██╗ █████╗ ██╗
-╚══██╔══╝██║██╔════╝██║ ██╔╝██╔════╝╚══██╔══╝██╔════╝    ██╔════╝██╔════╝██╔════╝╚══██╔══╝██║██║   ██║██╔══██╗██║
-   ██║   ██║██║     █████╔╝ █████╗     ██║   ███████╗    █████╗  █████╗  ███████╗   ██║   ██║██║   ██║███████║██║
-   ██║   ██║██║     ██╔═██╗ ██╔══╝     ██║   ╚════██║    ██╔══╝  ██╔══╝  ╚════██║   ██║   ██║╚██╗ ██╔╝██╔══██║██║
-   ██║   ██║╚██████╗██║  ██╗███████╗   ██║   ███████║    ██║     ███████╗███████║   ██║   ██║ ╚████╔╝ ██║  ██║███████╗
-   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝    ╚═╝     ╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝`
 </script>
 
 <template>
@@ -32,6 +25,10 @@ const asciiTickets = String.raw`████████╗██╗ ███�
       <div
         aria-hidden="true"
         class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(198,255,51,0.16),transparent_34%),linear-gradient(145deg,rgba(198,255,51,0.11),transparent_30%,rgba(198,255,51,0.08)_58%,transparent_84%)]"
+      />
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_18%,rgba(125,57,235,0.26),transparent_34%),linear-gradient(215deg,transparent_12%,rgba(125,57,235,0.14)_48%,transparent_76%)]"
       />
 
       <div class="relative z-10 mx-auto flex w-full max-w-384 flex-col items-center px-2 text-center">
@@ -57,13 +54,14 @@ const asciiTickets = String.raw`████████╗██╗ ███�
         as-child
         variant="outline"
         size="lg"
-        class="group absolute bottom-[clamp(1.5rem,4vw,2.75rem)] left-1/2 z-20 h-auto min-h-[clamp(4.25rem,8vw,8.5rem)] w-[calc(100vw-1.5rem)] max-w-368 -translate-x-1/2 overflow-hidden rounded-none border-2 border-white bg-transparent px-[clamp(0.5rem,2vw,2rem)] py-[clamp(0.9rem,2vw,1.75rem)] text-white shadow-[8px_8px_0_#ffffff] hover:-translate-y-1 hover:bg-transparent hover:border-[#C6FF33] hover:text-[#C6FF33] hover:shadow-[8px_8px_0_#C6FF33] sm:w-[94vw] md:w-[90vw] lg:w-[86vw] xl:w-[82vw] 2xl:w-[78vw]"
+        class="group absolute bottom-[clamp(1.5rem,4vw,2.75rem)] left-1/2 z-20 h-auto min-h-[clamp(4.25rem,8vw,8.5rem)] w-[calc(100vw-1.5rem)] max-w-368 -translate-x-1/2 overflow-hidden rounded-none border-2 border-[#C6FF33] bg-transparent px-[clamp(0.5rem,2vw,2rem)] py-[clamp(0.9rem,2vw,1.75rem)] text-[#C6FF33]  shadow-[8px_8px_0_#C6FF33] hover:-translate-y-1 hover:bg-[#C6FF33] hover:border-[#C6FF33] hover:text-black hover:shadow-[8px_8px_0_#C6FF33] sm:w-[94vw] md:w-[90vw] lg:w-[86vw] xl:w-[82vw] 2xl:w-[78vw]"
       >
         <RouterLink to="/tickets" aria-label="Tickets festival">
-          <pre
-            aria-hidden="true"
-            class="whitespace-pre text-center font-mono text-[clamp(0.22rem,0.82vw,0.78rem)] font-bold leading-[1.05] [text-shadow:0_0_12px_rgba(255,255,255,0.5)] group-hover:[text-shadow:0_0_10px_rgba(0,0,0,0.3)]"
-          >{{ asciiTickets }}</pre>
+          <span
+            class=" titulo-portada block text-center text-4xl font-bold uppercase leading-none tracking-[0.18em] [text-shadow:0_0_12px_rgba(198,255,51,0.55)] group-hover:[text-shadow:0_0_10px_rgba(0,0,0,0.3)] sm:text-5xl md:text-7xl lg:text-8xl"
+          >
+            Tickets festival
+          </span>
         </RouterLink>
       </Button>
     </section>
@@ -76,7 +74,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
       >
       <div class="relative z-10 flex w-full flex-col items-center justify-center px-6 text-center">
         <img
-          src="/Imagines/ESCLAT/estrella.png"
+          src="/Imagines/ESCLAT/estrellaaa.png"
           alt=""
           class="mb-12 w-72 object-contain md:w-md lg:w-160"
         >
@@ -89,15 +87,15 @@ const asciiTickets = String.raw`████████╗██╗ ███�
     <section id="fecha" class=" mt-5 z-50 flex min-h-[32vh] w-full flex-col bg-black text-center md:min-h-[36vh]">
       <div class="grid min-h-[32vh] w-full grid-cols-1 md:min-h-[36vh] md:grid-cols-2">
         <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-r-3 border-[#7d39eb]  px-4 py-6  ">
-          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#C6FF33] md:text-xl">Fecha</span>
-          <h1 class="titulo-portada mt-3 text-5xl font-bold leading-none text-white md:text-6xl lg:text-7xl">
+          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#7d39eb] md:text-xl">Fecha</span>
+          <h1 class="titulo-portada mt-3 text-5xl  leading-none  md:text-6xl lg:text-7xl">
             23 al 25 de octubre
           </h1>
         </div>
 
         <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-l-3 border-[#7d39eb]  px-4 py-6">
-          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#C6FF33] md:text-xl">Lugar</span>
-          <h1 class="titulo-portada mt-3 text-5xl font-bold leading-none text-white md:text-6xl lg:text-7xl">
+          <span class="text-base  uppercase tracking-[0.2em] text-[#7d39eb] md:text-xl">Lugar</span>
+          <h1 class="titulo-portada mt-3 text-5xl  leading-none  md:text-6xl lg:text-7xl">
             Las Naves, Valencia
           </h1>
         </div>
@@ -113,12 +111,16 @@ const asciiTickets = String.raw`████████╗██╗ ███�
         aria-hidden="true"
         class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(198,255,51,0.16),transparent_34%),linear-gradient(145deg,rgba(198,255,51,0.11),transparent_30%,rgba(198,255,51,0.08)_58%,transparent_84%)]"
       />
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_78%_18%,rgba(125,57,235,0.26),transparent_34%),linear-gradient(215deg,transparent_12%,rgba(125,57,235,0.14)_48%,transparent_76%)]"
+      />
 
       <div class="relative z-10">
-        <p class="mb-5 text-sm font-bold uppercase tracking-[0.32em] text-[#C6FF33] md:text-base">
+        <p class="mb-5 text-sm font-bold uppercase tracking-[0.32em] text-[#7d39eb] md:text-base">
           Lineup
         </p>
-        <h2 class="titulo-portada  text-6xl font-bold leading-none md:text-8xl">
+        <h2 class="titulo-portada  text-6xl  leading-none md:text-8xl">
           Artistas confirmados
         </h2>
 
@@ -167,22 +169,18 @@ const asciiTickets = String.raw`████████╗██╗ ███�
 }
 
 .home-geist {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
-  font-weight: 400;
-}
-
-.home-logo {
-  filter:
-    drop-shadow(0 0 14px rgba(198, 255, 51, 0.56))
-    drop-shadow(0 0 34px rgba(255, 255, 255, 0.26));
+  font-family: 'Impact', 'Unbounded', sans-serif;
 }
 
 .habilidades {
-  font-family: 'Unbounded', sans-serif; 
+  font-family: 'Unbounded', sans-serif;
 }
 
-</style>
+
+ 
+ 
+  </style>

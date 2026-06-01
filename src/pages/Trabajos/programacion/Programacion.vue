@@ -334,11 +334,11 @@ const showNextDay = () => {
 }
 
 .home-geist {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 }
 
 .titulo-portada {
-  font-family: 'Anton', 'Unbounded', sans-serif;
+  font-family: 'Impact', 'Unbounded', sans-serif;
 }
 
 .habilidades {

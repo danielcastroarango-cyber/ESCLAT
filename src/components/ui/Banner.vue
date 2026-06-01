@@ -47,11 +47,11 @@
 }
 
 .home-geist {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Impact', sans-serif;
   font-weight: 400;
 }
 

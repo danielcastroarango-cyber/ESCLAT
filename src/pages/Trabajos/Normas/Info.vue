@@ -68,7 +68,7 @@ const faqs = [
     <main class="flex w-full flex-1 flex-col items-center justify-center gap-12 bg-black text-white">
     <div class="flex w-full flex-col gap-15 justify-center items-start">
       <div class="my-8 w-full max-w-350 px-4 text-left md:px-10 lg:px-14">
-        <h1 class="titulo-portada text-7xl md:text-9xl  text-left md:my-20 mb-10 text-[#c6ff33]">
+        <h1 class="titulo-portada text-7xl md:text-9xl  text-left md:my-20 mb-10 ">
           Normas
         </h1>
         <p class="text-left text-xl md:text-3xl text-white">
@@ -168,11 +168,11 @@ const faqs = [
 }
 
 .home-geist {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Impact', sans-serif;
 }
 
 .habilidades {
