@@ -80,7 +80,7 @@ const stopPan = (event: PointerEvent) => {
 <template>
   <div
     ref="mapWindow"
-    class="artist-map relative h-[75vh] min-h-[30rem] w-full overflow-auto border-2 border-[#c6ff33] bg-transparent shadow-[6px_6px_0_#c6ff33]"
+    class="artist-map relative h-[75vh] min-h-[30rem] w-full overflow-auto border-2 border-[#c6ff33] bg-transparent shadow-[6px_6px_0_#fff] focus:outline-none"
     :class="{ 'artist-map--panning': isPanning }"
     tabindex="0"
     aria-label="Mapa desplazable de artistas"
@@ -106,7 +106,7 @@ const stopPan = (event: PointerEvent) => {
         <img
           :src="artist.image"
           :alt="artist.name"
-          class="h-17 w-17 rounded-full border-2 border-[#c6ff33] object-cover shadow-[4px_4px_0_#c6ff33] transition-transform duration-300 group-hover:-translate-y-1 md:h-28 md:w-28 "
+          class="h-17 w-17 rounded-full border-2 border-[#c6ff33] object-cover shadow-[4px_4px_0_#fff] transition-transform duration-300 group-hover:-translate-y-1 md:h-28 md:w-28 "
         >
       </button>
 
@@ -154,7 +154,7 @@ const stopPan = (event: PointerEvent) => {
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
+  font-family: 'Impact', sans-serif;
   font-weight: 400;
 }
 
@@ -212,7 +212,7 @@ const stopPan = (event: PointerEvent) => {
   background: #000;
   padding: clamp(0.75rem, 3vw, 1rem);
   color: #fff;
-  box-shadow: 4px 4px 0 #c6ff33;
+  box-shadow: 4px 4px 0 #ffffff;
   transform: translateX(-50%);
 }
 

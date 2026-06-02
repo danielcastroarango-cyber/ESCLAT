@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative z-[60] w-full overflow-hidden border-b-2 border-black bg-[#c6ff33] py-2 text-black"
+    class="relative z-[60] w-full overflow-hidden bg-[#c6ff33] py-2 text-black"
     aria-label="ULTIMAS EARLYBIRDS"
   >
     <div class="flex w-max whitespace-nowrap animate-[earlybirds-marquee_16s_linear_infinite]">
@@ -8,7 +8,7 @@
         <span
           v-for="item in 8"
           :key="`earlybirds-a-${item}`"
-          class="px-5 titulo-portada text-sm  uppercase tracking-[0.28em] sm:px-8 sm:text-base md:text-xl"
+          class="px-5 titulo-portada font-black text-sm  uppercase tracking-[0.28em] sm:px-8 sm:text-base md:text-xl"
         >
           ULTIMAS EARLYBIRDS
         </span>
@@ -17,7 +17,7 @@
         <span
           v-for="item in 8"
           :key="`earlybirds-b-${item}`"
-          class="px-5 titulo-portada text-sm  uppercase tracking-[0.28em] sm:px-8 sm:text-base md:text-xl"
+          class="px-5 titulo-portada font-black text-sm  uppercase tracking-[0.28em] sm:px-8 sm:text-base md:text-xl"
         >
           ULTIMAS EARLYBIRDS
         </span>
@@ -47,12 +47,12 @@
 }
 
 .home-geist {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
-  font-weight: 400;
+  font-family: 'Neue Montreal', sans-serif;
+  
 }
 
 .habilidades {
