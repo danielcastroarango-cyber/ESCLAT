@@ -93,10 +93,10 @@
                         @click="selectedItem = item.label"
                     >
                         <NavigationMenuLink :class="[
-                            'inline-flex h-auto min-h-9 w-full min-w-32 items-center justify-center rounded-none border-2 border-black px-4 py-2 text-xs font-bold uppercase tracking-[0.14em]  transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#c6ff33] hover:border-[#c6ff33] hover:text-black hover:shadow-[5px_5px_0_#000] focus-visible:ring-2 focus-visible:ring-black focus-visible:outline-none md:min-h-10 md:px-5 md:py-2.5 2xl:min-w-44 2xl:px-8',
+                            'inline-flex h-auto min-h-9 w-full min-w-32 items-center justify-center rounded-none border-2 border-black px-4 py-2 text-xs font-bold uppercase tracking-[0.14em]  transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#c6ff33] hover:border-[#c6ff33] hover:text-black focus-visible:ring-2 focus-visible:ring-black focus-visible:outline-none md:min-h-10 md:px-5 md:py-2.5 2xl:min-w-44 2xl:px-8',
                             isActiveItem(item) || selectedItem === item.label
-                              ? 'bg-[#c6ff33] text-black border-[#c6ff33] shadow-[5px_5px_0_#000]'
-                              : 'bg-black text-[#c6ff33] '
+                              ? 'bg-[#c6ff33] text-black border-[#c6ff33] '
+                              : 'border-[#c6ff33] bg-black text-[#c6ff33] '
                           ]">
                             {{item.label}}
                         </NavigationMenuLink>

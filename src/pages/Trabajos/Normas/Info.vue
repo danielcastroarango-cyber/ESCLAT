@@ -70,29 +70,24 @@ const faqs = [
     <section id="Normas" class="relative w-full overflow-hidden bg-black px-4 py-20 md:px-10 lg:px-14">
        <div class="flex w-full flex-col gap-15 justify-center items-start">
       <div class="my-8 w-full max-w-350 px-4 text-left md:px-10 lg:px-14">
-        <h1 class="titulo-portada font-black text-7xl md:text-9xl text-[#c6ff33]   text-left  ">
+        <h1 class="titulo-portada font-black text-7xl md:text-9xl text-white   text-left  ">
           Normas
         </h1>
         
       </div>
     </div>
-<div
-        aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(198,255,51,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(198,255,51,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(198,255,51,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
-      />
-
       <div class="relative z-10 grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         <Card
           v-for="rule in rules"
           :key="rule.title"
-          class="h-full rounded-none border-3 border-black bg-white text-black shadow-[6px_6px_0_#c6ff33] "
+          class="h-full rounded-none   bg-[#c6ff33] text-black"
         >
           <CardHeader class="px-5 pb-0">
-            <CardTitle class="titulo-portada font-black text-[#c6ff33] text-3xl  leading-none md:text-4xl">
+            <CardTitle class="titulo-portada font-black text-white text-3xl  leading-none md:text-4xl">
               {{ rule.title }}
             </CardTitle>
           </CardHeader>
-          <CardContent class="px-5 font-bold text-base leading-relaxed  md:text-lg">
+          <CardContent class="px-5 font-bold text-base leading-relaxed  md:text-xl">
             <p>{{ rule.text }}</p>
           </CardContent>
         </Card>
