@@ -63,7 +63,7 @@ const faqs = [
 
 <template class="">
   <div class="min-h-screen w-full flex flex-col items-center justify-center font-sans">
-    <NavigatorPrimarius />
+    <!-- <NavigatorPrimarius /> -->
     <Banner />
     <main class="flex w-full flex-1 flex-col items-center justify-center gap-0 bg-white text-black">
    
@@ -80,10 +80,10 @@ const faqs = [
         <Card
           v-for="rule in rules"
           :key="rule.title"
-          class="h-full rounded-none   bg-[#c6ff33] text-black"
+          class="h-full rounded-none  border-[#c6ff33] border-5 bg-white text-black"
         >
           <CardHeader class="px-5 pb-0">
-            <CardTitle class="titulo-portada font-black text-white text-3xl  leading-none md:text-4xl">
+            <CardTitle class="titulo-portada font-black text-black text-3xl  leading-none md:text-4xl">
               {{ rule.title }}
             </CardTitle>
           </CardHeader>
@@ -106,7 +106,7 @@ const faqs = [
       />
 
       <div class="flex min-h-[35vh] flex-col justify-center border-[#c6ff33] border-l-8  px-6 py-12 text-left lg:min-h-screen  lg:px-12">
-        <h2 class="titulo-portada font-black text-5xl leading-none text-black md:text-7xl lg:text-8xl">
+        <h2 class="titulo-portada font-black text-5xl leading-none text-black md:text-6xl lg:text-7xl 2xl:text-8xl">
           Donde nos ubicamos
         </h2>
         <p class="mt-8 max-w-xl text-xl font-medium leading-relaxed text-black md:text-3xl">

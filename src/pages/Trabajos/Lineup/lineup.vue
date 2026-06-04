@@ -6,7 +6,7 @@ import NavigatorPrimarius from '@/components/ui/Navegador.vue'
 
 <template>
   <div class="min-h-screen w-full bg-black text-white">
-    <NavigatorPrimarius />
+    <!-- <NavigatorPrimarius /> -->
     <Banner />
 
     <main class="relative overflow-hidden px-4 py-20 md:px-10 lg:px-14">

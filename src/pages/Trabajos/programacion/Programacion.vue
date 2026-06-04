@@ -45,7 +45,7 @@ const showNextDay = () => {
 
 <template>
   <div class="organizacion-page relative isolate flex min-h-screen w-full flex-col overflow-x-hidden bg-white text-black">
-    <NavigatorPrimarius class="relative z-10" />
+   <!--  <NavigatorPrimarius class="relative z-10" /> -->
     <Banner />
 
     <main class="relative z-10 flex flex-1 flex-col items-center justify-center px-2 py-10 md:px-6 lg:px-8">

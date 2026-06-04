@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Local Git repair backups
+.git.corrupt-*/
+
+# Unreadable temporary asset
+public/Imagines/ESCLAT/Portada_temp.png
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

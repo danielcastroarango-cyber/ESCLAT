@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Menu from '@/components/ui/Menu.vue';
 import { RouterView } from 'vue-router';
 
 
@@ -6,7 +7,8 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <main>   
+  <main>
+    <Menu />
     <RouterView />
   </main>
 </template>
