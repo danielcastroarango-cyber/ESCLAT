@@ -7,54 +7,32 @@ import {  X,  Instagram, MessageCircle } from 'lucide-vue-next'
 
 <template>
     <div>
-        <footer class="w-full border-t-5 border-[#1cff2f] bg-black text-white py-12 px-6">
+        <footer class="w-full border-t-5 border-[#c6ff33] bg-black text-center text-white py-8 px-5">
 
         
          <img
+            src="/Imagines/ESCLAT/Diputació de València.png"
+            alt="Diputació de València"
+            class="mx-8 mb-1 inline-block h-48 w-48 object-contain align-middle md:mx-12 md:mb-5 md:h-64 md:w-64"
+         />
+         <img
             src="/Imagines/ESCLAT/LOGO_LN.png"
             alt="Logo LN"
-            class="mx-auto mb-6 h-24 w-auto"
+            class="mx-8 mb-1 inline-block h-80 w-80 object-contain align-middle md:mx-12 md:mb-5 md:h-[28rem] md:w-[28rem]"
+         />
+         <img
+            src="/Imagines/ESCLAT/Cerveza-turia.png"
+            alt="Cerveza Turia"
+            class="mx-8 mb-5 inline-block h-40 w-40 object-contain align-middle md:mx-12 md:h-52 md:w-52"
+         />
+         <img
+            src="/Imagines/ESCLAT/Coca-cola.png"
+            alt="Coca-Cola"
+            class="mx-8 mb-5 inline-block h-48 w-48 object-contain align-middle md:mx-12 md:h-64 md:w-64"
          />
 
          
-            <h1 class="titulo-portada text-left text-6xl font-bold mb-10  transform-gpu text-[#1cff2f] duration-300 ease-out">Contácto</h1>
-    
-
-            <div class="grid w-full grid-cols-1 gap-8 md:grid-cols-3">
-
-                
-
-            <div class="space-y-4 text-left">
-
-                
-
-                <h3 class="text-xl font-bold text-white/75">Información de Contacto</h3>
-                    
-                <div class="space-y-2">
-                    <p class=" titulo-portada text-left text-5xl font-bold mb-10  transform-gpu text-white duration-300 ease-out">
-                   
-
-                    info@esclatfestival.com
-
-                    </p>
-                  
-                
-                </div>
-                </div>
-
-                <!-- Redes sociales -->
-                <div class="space-y-4   text-white/75">
-                <h3 class="text-xl font-bold ">Sígue nuestras redes</h3>
-                <div class="flex gap-8  text-[#1cff2f]">
-                
-                    <X class="  w-10 h-10 hover:scale-125 transition-colors" />       
-                    
-                    <Instagram class="w-10 h-10 hover:scale-125 transition-colors" />
-                    <MessageCircle class="w-10 h-10 hover:scale-125 transition-colors" />
-                        
-                </div>
-            </div>
-            </div>
+            
         </footer>
     </div>
 </template>
@@ -82,8 +60,8 @@ import {  X,  Instagram, MessageCircle } from 'lucide-vue-next'
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
-  font-weight: 400;
+  font-family: 'Neue Montreal', sans-serif;
+  
 }
 
 </style>

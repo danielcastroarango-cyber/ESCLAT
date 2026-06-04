@@ -4,121 +4,57 @@ import Banner from '@/components/ui/Banner.vue'
 import CountdownPopup from '@/components/ui/CountdownPopup.vue'
 import Footer from '@/components/ui/Footer.vue'
 import NavigatorPrimarius from '@/components/ui/Navegador.vue'
-
-const asciiTickets = String.raw`████████╗██╗ ██████╗██╗  ██╗███████╗████████╗███████╗    ███████╗███████╗███████╗████████╗██╗██╗   ██╗ █████╗ ██╗
-╚══██╔══╝██║██╔════╝██║ ██╔╝██╔════╝╚══██╔══╝██╔════╝    ██╔════╝██╔════╝██╔════╝╚══██╔══╝██║██║   ██║██╔══██╗██║
-   ██║   ██║██║     █████╔╝ █████╗     ██║   ███████╗    █████╗  █████╗  ███████╗   ██║   ██║██║   ██║███████║██║
-   ██║   ██║██║     ██╔═██╗ ██╔══╝     ██║   ╚════██║    ██╔══╝  ██╔══╝  ╚════██║   ██║   ██║╚██╗ ██╔╝██╔══██║██║
-   ██║   ██║╚██████╗██║  ██╗███████╗   ██║   ███████║    ██║     ███████╗███████║   ██║   ██║ ╚████╔╝ ██║  ██║███████╗
-   ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝    ╚═╝     ╚══════╝╚══════╝   ╚═╝   ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝`
 </script>
 
 <template>
-  <div class="home-geist  min-h-screen w-full flex flex-col items-center justify-center  text-white">
+  <div class="home-geist  min-h-screen w-full flex flex-col items-center justify-center bg-black text-white">
   
-   <NavigatorPrimarius />
+   <!-- <NavigatorPrimarius /> -->
     <Banner />
    <CountdownPopup class="z-51" />
     
     <!-- <img class="absolute opacity-20" src="/imagines/tonitrui.png" alt=""> -->
     <section
       id="home"
-      class="relative flex min-h-[78vh] w-full items-center justify-center overflow-visible bg-black px-4 pb-40 pt-20 text-white md:min-h-[86vh] md:pb-48 lg:min-h-screen"
+      class="relative flex min-h-[78vh] w-full items-center bg-white justify-center overflow-visible px-4 pb-40 pt-20 text-white md:min-h-[86vh] md:pb-48 lg:min-h-screen"
     >
-      <div
-        aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(198,255,51,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(198,255,51,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(198,255,51,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
-      />
-      <div
-        aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(198,255,51,0.16),transparent_34%),linear-gradient(145deg,rgba(198,255,51,0.11),transparent_30%,rgba(198,255,51,0.08)_58%,transparent_84%)]"
-      />
+      <img
+        src="/Imagines/ESCLAT/Header_Portada_2.1.png"
+        alt=""
+        class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover md:object-contain"
+      >
 
-      <div class="relative z-10 mx-auto flex w-full max-w-384 flex-col items-center px-2 text-center">
-        <p class="mb-8 text-xs font-bold uppercase tracking-[0.32em] text-[#C6FF33] md:text-sm">
-          Música / Arte / Performance
-        </p>
+     
 
-        <div class="flex max-w-full items-center justify-center gap-2 overflow-visible px-4 py-4 sm:gap-5 md:gap-8 lg:gap-10 xl:gap-12">
-          <img
-            src="/Imagines/ESCLAT/ESCLATLOGO.png"
-            alt="ESCLAT"
-            class="home-logo w-[min(96vw,72rem)] object-contain"
-          >
-        </div>
+    </section>
 
-        <p class="mt-8 max-w-3xl text-base font-medium leading-relaxed text-white/85 md:text-xl lg:text-2xl">
-          Festival de música, arte digital y cultura underground. Un punto de colisión entre sonido,
-          visuales, ruido, luz y comunidad.
-        </p>
-      </div>
-
+    <section id="tickets" class="flex w-full items-center justify-center bg-black">
       <Button
         as-child
         variant="outline"
         size="lg"
-        class="group absolute bottom-[clamp(1.5rem,4vw,2.75rem)] left-1/2 z-20 h-auto min-h-[clamp(4.25rem,8vw,8.5rem)] w-[calc(100vw-1.5rem)] max-w-368 -translate-x-1/2 overflow-hidden rounded-none border-2 border-white bg-transparent px-[clamp(0.5rem,2vw,2rem)] py-[clamp(0.9rem,2vw,1.75rem)] text-white shadow-[8px_8px_0_#ffffff] hover:-translate-y-1 hover:bg-transparent hover:border-[#C6FF33] hover:text-[#C6FF33] hover:shadow-[8px_8px_0_#C6FF33] sm:w-[94vw] md:w-[90vw] lg:w-[86vw] xl:w-[82vw] 2xl:w-[78vw]"
+        class="group h-auto min-h-[clamp(3.75rem,8vw,8.5rem)] w-full overflow-hidden rounded-none border-2 border-[#c6ff33] bg-[#c6ff33] px-[clamp(0.5rem,2vw,2rem)] py-[clamp(0.75rem,2.2vw,1.75rem)] text-white hover:-translate-y-1 hover:border-[#c6ff33] hover:bg-black hover:text-[#c6ff33] hover:shadow-[6px_6px_0_#c6ff33]"
       >
         <RouterLink to="/tickets" aria-label="Tickets festival">
-          <pre
-            aria-hidden="true"
-            class="whitespace-pre text-center font-mono text-[clamp(0.22rem,0.82vw,0.78rem)] font-bold leading-[1.05] [text-shadow:0_0_12px_rgba(255,255,255,0.5)] group-hover:[text-shadow:0_0_10px_rgba(0,0,0,0.3)]"
-          >{{ asciiTickets }}</pre>
+          <span
+            class=" titulo-portada font-black block text-center text-[clamp(1.75rem,8vw,7.5rem)] uppercase leading-[0.95] tracking-[0.1em] [text-shadow:0_0_12px_rgba(255,255,255,0.55)] group-hover:[text-shadow:0_0_10px_rgba(0,0,0,0.3)] sm:tracking-[0.14em] lg:tracking-[0.18em]"
+          >
+            Tickets festival 
+          </span>
         </RouterLink>
       </Button>
     </section>
-
-    <section id="video" class="relative -mb-12 flex min-h-[80vh] w-full items-center justify-center overflow-hidden py-10 lg:min-h-screen"> 
-      <img
-        src="/Imagines/ESCLAT/Festival%202.webp"
-        alt=""
-        class="absolute inset-0 z-0 h-full w-full object-cover"
-      >
-      <div class="relative z-10 flex w-full flex-col items-center justify-center px-6 text-center">
-        <img
-          src="/Imagines/ESCLAT/estrella.png"
-          alt=""
-          class="mb-12 w-72 object-contain md:w-md lg:w-160"
-        >
-        <p class="w-[92vw] max-w-none text-center text-2xl font-medium leading-relaxed text-white md:text-4xl lg:w-[94vw] lg:text-5xl">
-          Un lugar donde la noche no exige máscaras, donde cada cuerpo, cada look y cada forma de sentir tiene cabida. Aquí no existe el juicio: existe la LIBERTAD. La estética mezcla la energía de los 90, el imaginario industrial berlinés y la irreverencia valenciana.
-        </p>
-      </div>
-    </section>
-
-    <section id="fecha" class=" mt-5 z-50 flex min-h-[32vh] w-full flex-col bg-black text-center md:min-h-[36vh]">
-      <div class="grid min-h-[32vh] w-full grid-cols-1 md:min-h-[36vh] md:grid-cols-2">
-        <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-r-3 border-[#C6FF33]  px-4 py-6  ">
-          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#C6FF33] md:text-xl">Fecha</span>
-          <h1 class="titulo-portada mt-3 text-5xl font-bold leading-none text-white md:text-6xl lg:text-7xl">
-            23 al 25 de octubre
-          </h1>
-        </div>
-
-        <div class="flex h-full flex-col items-center justify-center border-b-5 md:border-l-3 border-[#C6FF33]  px-4 py-6">
-          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#C6FF33] md:text-xl">Lugar</span>
-          <h1 class="titulo-portada mt-3 text-5xl font-bold leading-none text-white md:text-6xl lg:text-7xl">
-            Las Naves, Valencia
-          </h1>
-        </div>
-      </div>
-    </section>
-
-     <section id="lineup" class="relative w-full overflow-hidden bg-black px-4 py-24 text-white md:px-10 lg:px-14">
+<section id="lineup" class="relative w-full overflow-hidden bg-black px-4 py-24 text-white md:px-10 lg:px-14">
       <div
         aria-hidden="true"
         class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(198,255,51,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(198,255,51,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(198,255,51,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
       />
-      <div
-        aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_42%,rgba(198,255,51,0.16),transparent_34%),linear-gradient(145deg,rgba(198,255,51,0.11),transparent_30%,rgba(198,255,51,0.08)_58%,transparent_84%)]"
-      />
 
       <div class="relative z-10">
-        <p class="mb-5 text-sm font-bold uppercase tracking-[0.32em] text-[#C6FF33] md:text-base">
+        <p class="mb-5 text-sm font-bold uppercase tracking-[0.32em] text-[#c6ff33] md:text-base">
           Lineup
         </p>
-        <h2 class="titulo-portada text-6xl font-bold leading-none md:text-8xl">
+        <h2 class="titulo-portada  font-black text-6xl  leading-none md:text-8xl">
           Artistas confirmados
         </h2>
 
@@ -128,7 +64,7 @@ const asciiTickets = String.raw`████████╗██╗ ███�
             :key="artist"
             as-child
             variant="outline"
-            class="h-auto rounded-none border-2 border-white bg-transparent px-5 py-6 text-xl font-bold uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#fff] hover:-translate-y-1 hover:border-[#C6FF33] hover:bg-transparent hover:text-[#C6FF33] hover:shadow-[6px_6px_0_#C6FF33] md:text-2xl"
+            class="h-auto rounded-none border-2 border-[#c6ff33] bg-transparent px-5 py-6 text-xl font-bold uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#c6ff33] hover:-translate-y-1 hover:border-[#c6ff33] hover:bg-[#c6ff33] hover:text-black hover:shadow-[6px_6px_0_#fff] md:text-2xl"
           >
             <RouterLink to="/lineup">
               {{ artist }}
@@ -138,6 +74,39 @@ const asciiTickets = String.raw`████████╗██╗ ███�
       </div>
     </section>
 
+    <section id="video" class="relative -mb-12 flex min-h-[80vh] w-full items-center justify-center overflow-hidden py-10 lg:min-h-screen"> 
+      <img
+        src="/Imagines/ESCLAT/Festival%202.webp"
+        alt=""
+        class="absolute inset-0 z-0 h-full w-full object-cover"
+      >
+      <div class="relative z-10 flex w-full flex-col items-center justify-center px-6 text-center">
+        
+        <p class="w-[92vw] max-w-none text-center text-2xl font-medium leading-relaxed text-white md:text-4xl lg:w-[94vw] lg:text-5xl">
+          Un lugar donde la noche no exige máscaras, donde cada cuerpo, cada look y cada forma de sentir tiene cabida. Aquí no existe el juicio: existe la LIBERTAD. La estética mezcla la energía de los 90, el imaginario industrial berlinés y la irreverencia valenciana.
+        </p>
+      </div>
+    </section>
+
+    <section id="fecha" class=" mt-5 z-50 flex min-h-[32vh] w-full flex-col  text-center md:min-h-[36vh]">
+      <div class="grid min-h-[32vh] w-full grid-cols-1 md:min-h-[36vh] md:grid-cols-2">
+        <div class="flex h-full flex-col items-center bg-[#c6ff33] md:border-r-5 border-white justify-center  px-4 py-6 ">
+          <span class="text-base font-bold uppercase tracking-[0.2em] text-black md:text-xl">Fecha</span>
+          <h1 class="titulo-portada font-bold mt-3 text-5xl text-black leading-none  md:text-6xl lg:text-7xl">
+            23 al 25 de octubre
+          </h1>
+        </div>
+
+        <div class="flex h-full flex-col items-center bg-white justify-center md:border-l-5 border-[#c6ff33]   px-4 py-6 ">
+          <span class="text-base font-bold uppercase tracking-[0.2em] text-black md:text-xl">Lugar</span>
+          <h1 class="titulo-portada font-bold mt-3 text-5xl text-black leading-none  md:text-6xl lg:text-7xl">
+            Las Naves, Valencia
+          </h1>
+        </div>
+      </div>
+    </section>
+
+     
 
 
       
@@ -167,22 +136,18 @@ const asciiTickets = String.raw`████████╗██╗ ███�
 }
 
 .home-geist {
-  font-family: 'Geist', sans-serif;
+  font-family: 'Neue Montreal', sans-serif;
 }
 
 .titulo-portada {
-  font-family: 'Anton', sans-serif;
-  font-weight: 400;
-}
-
-.home-logo {
-  filter:
-    drop-shadow(0 0 14px rgba(198, 255, 51, 0.56))
-    drop-shadow(0 0 34px rgba(255, 255, 255, 0.26));
+  font-family: 'Neue Montreal', 'Unbounded', sans-serif;
 }
 
 .habilidades {
-  font-family: 'Unbounded', sans-serif; 
+  font-family: 'Unbounded', sans-serif;
 }
 
-</style>
+
+ 
+ 
+  </style>

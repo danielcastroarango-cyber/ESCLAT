@@ -77,7 +77,7 @@
                     @click="selectedItem = null"
                 >
                     <img
-                        src="/Imagines/ESCLAT/Estrellitas.png"
+                        src="/Imagines/ESCLAT/esclat_simple.png"
                         alt=""
                         class="home-image hover:-translate-y-1 hover:scale-110 transition-transform duration-300 ease-out"
                     >
@@ -93,10 +93,10 @@
                         @click="selectedItem = item.label"
                     >
                         <NavigationMenuLink :class="[
-                            'inline-flex h-auto min-h-9 w-full min-w-32 items-center justify-center rounded-none border-2 border-[#1cff2f] px-4 py-2 text-xs font-bold uppercase tracking-[0.14em]  transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#1cff2f] hover:text-black hover:shadow-[5px_5px_0_#000] focus-visible:ring-2 focus-visible:ring-black focus-visible:outline-none md:min-h-10 md:px-5 md:py-2.5 2xl:min-w-44 2xl:px-8',
+                            'inline-flex h-auto min-h-9 w-full min-w-32 items-center justify-center rounded-none border-2 border-black px-4 py-2 text-xs font-bold uppercase tracking-[0.14em]  transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-[#c6ff33] hover:border-[#c6ff33] hover:text-black focus-visible:ring-2 focus-visible:ring-black focus-visible:outline-none md:min-h-10 md:px-5 md:py-2.5 2xl:min-w-44 2xl:px-8',
                             isActiveItem(item) || selectedItem === item.label
-                              ? 'bg-[#1cff2f] text-black'
-                              : 'bg-black text-white'
+                              ? 'bg-[#c6ff33] text-black border-[#c6ff33] '
+                              : 'border-[#c6ff33] bg-black text-[#c6ff33] '
                           ]">
                             {{item.label}}
                         </NavigationMenuLink>
@@ -131,24 +131,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    min-width: 3rem;
-    height: 3rem;
+    gap: 0.75rem;
+    min-width: 4.75rem;
+    min-height: 4.25rem;
     border-radius: 9999px;
-    padding-right: 0.75rem;
+    padding: 0.25rem 1rem 0.25rem 0.5rem;
 
-    background-color: #000000;
+    background-color: #ffffff;
     flex-shrink: 0;
     }
 
     .home-image {
-    width: 2rem;
-    height: 2rem;
+    width: clamp(3.25rem, 5.5vw, 4.75rem);
+    height: clamp(3.25rem, 5.5vw, 4.75rem);
     object-fit: contain;
     }
 
     .language-label {
-    color: #1cff2f;
+    color: #000000;
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 1;
@@ -157,8 +157,8 @@
 
     .extra-nav {
     width: 100%;
-    background-color: #000000;
-    border-bottom: 5px solid #1cff2f;
+    background-color: #ffffff;
+    border-bottom: 5px solid #c6ff33;
     }
 
     .nav-content {
