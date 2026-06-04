@@ -4,15 +4,6 @@ import Footer from '@/components/ui/Footer.vue'
 import NavigatorPrimarius from '@/components/ui/Navegador.vue'
 import Banner from '@/components/ui/Banner.vue'
 
-const asciiStar = String.raw`       *
-    *  |  *
- * ----+---- *
-     \ | /
-  -----+-----
-     / | \
- * ----+---- *
-    *  |  *
-       *`
 
 const tickets = [
   {
@@ -53,7 +44,7 @@ const eventDetails = [
 
 <template>
   <div class="home-geist flex min-h-screen w-full flex-col items-center text-black">
-    <NavigatorPrimarius />
+    <!-- <NavigatorPrimarius /> -->
     <Banner />
 
     <main class="relative flex w-full flex-1 flex-col items-center overflow-visible bg-black text-white">
@@ -64,7 +55,7 @@ const eventDetails = [
         <div class="mx-auto flex w-full max-w-384 flex-col items-center px-2 text-center">
           <div class="flex max-w-full items-center justify-center gap-2 overflow-visible p-8 sm:gap-5 md:gap-8 lg:gap-10 xl:gap-12">
             <img
-              src="/Imagines/ESCLAT/flow_pito.jpg"
+              src="/Imagines/ESCLAT/ESCLATLOGO_Verde.png"
               alt="ESCLAT"
               class="h-auto w-[min(88vw,64rem)] shrink-0 "
             >
@@ -144,8 +135,8 @@ const eventDetails = [
         referrerpolicy="no-referrer-when-downgrade"
       />
 
-      <div class="flex min-h-[35vh] flex-col justify-center border-t-2 border-[#c6ff33]  px-6 py-12 text-left lg:min-h-full lg:border-l-5 lg:border-t-0 lg:px-12">
-        <h2 class="titulo-portada text-5xl font-black leading-none text-black  md:text-7xl lg:text-8xl">
+      <div class="flex min-h-[35vh] flex-col justify-center border-t-2 border-[#c6ff33]   px-6 py-12 text-left lg:min-h-full lg:border-l-5 lg:border-t-0 lg:px-12">
+        <h2 class="titulo-portada text-5xl font-black leading-none text-black  md:text-6xl lg:text-7xl 2xl:text-8xl">
           Donde nos ubicamos
         </h2>
         <p class="mt-8 max-w-xl text-xl font-medium leading-relaxed text-black/85 md:text-3xl">

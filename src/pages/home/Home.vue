@@ -9,7 +9,7 @@ import NavigatorPrimarius from '@/components/ui/Navegador.vue'
 <template>
   <div class="home-geist  min-h-screen w-full flex flex-col items-center justify-center bg-black text-white">
   
-   <NavigatorPrimarius />
+   <!-- <NavigatorPrimarius /> -->
     <Banner />
    <CountdownPopup class="z-51" />
     
@@ -19,9 +19,9 @@ import NavigatorPrimarius from '@/components/ui/Navegador.vue'
       class="relative flex min-h-[78vh] w-full items-center bg-white justify-center overflow-visible px-4 pb-40 pt-20 text-white md:min-h-[86vh] md:pb-48 lg:min-h-screen"
     >
       <img
-        src="/Imagines/ESCLAT/Portada_temp.png"
+        src="/Imagines/ESCLAT/Header_Portada_2.1.png"
         alt=""
-        class="pointer-events-none absolute inset-0 z-0 h-full w-full object-covermd:object-contain"
+        class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover md:object-contain"
       >
 
      
@@ -81,11 +81,7 @@ import NavigatorPrimarius from '@/components/ui/Navegador.vue'
         class="absolute inset-0 z-0 h-full w-full object-cover"
       >
       <div class="relative z-10 flex w-full flex-col items-center justify-center px-6 text-center">
-        <img
-          src="/Imagines/ESCLAT/estrellaaa.png"
-          alt=""
-          class="mb-12 w-72 object-contain md:w-md lg:w-160"
-        >
+        
         <p class="w-[92vw] max-w-none text-center text-2xl font-medium leading-relaxed text-white md:text-4xl lg:w-[94vw] lg:text-5xl">
           Un lugar donde la noche no exige máscaras, donde cada cuerpo, cada look y cada forma de sentir tiene cabida. Aquí no existe el juicio: existe la LIBERTAD. La estética mezcla la energía de los 90, el imaginario industrial berlinés y la irreverencia valenciana.
         </p>
@@ -94,15 +90,15 @@ import NavigatorPrimarius from '@/components/ui/Navegador.vue'
 
     <section id="fecha" class=" mt-5 z-50 flex min-h-[32vh] w-full flex-col  text-center md:min-h-[36vh]">
       <div class="grid min-h-[32vh] w-full grid-cols-1 md:min-h-[36vh] md:grid-cols-2">
-        <div class="flex h-full flex-col items-center bg-[#c6ff33] border-r-5 border-white justify-center  px-4 py-6 ">
+        <div class="flex h-full flex-col items-center bg-[#c6ff33] md:border-r-5 border-white justify-center  px-4 py-6 ">
           <span class="text-base font-bold uppercase tracking-[0.2em] text-black md:text-xl">Fecha</span>
-          <h1 class="titulo-portada font-bold mt-3 text-5xl text-white leading-none  md:text-6xl lg:text-7xl">
+          <h1 class="titulo-portada font-bold mt-3 text-5xl text-black leading-none  md:text-6xl lg:text-7xl">
             23 al 25 de octubre
           </h1>
         </div>
 
-        <div class="flex h-full flex-col items-center bg-white justify-center border-l-5 border-[#c6ff33]   px-4 py-6 ">
-          <span class="text-base font-bold uppercase tracking-[0.2em] text-[#c6ff33] md:text-xl">Lugar</span>
+        <div class="flex h-full flex-col items-center bg-white justify-center md:border-l-5 border-[#c6ff33]   px-4 py-6 ">
+          <span class="text-base font-bold uppercase tracking-[0.2em] text-black md:text-xl">Lugar</span>
           <h1 class="titulo-portada font-bold mt-3 text-5xl text-black leading-none  md:text-6xl lg:text-7xl">
             Las Naves, Valencia
           </h1>

@@ -32,44 +32,7 @@ import {  X,  Instagram, MessageCircle } from 'lucide-vue-next'
          />
 
          
-            <h1 class="titulo-portada text-left text-6xl font-black mb-10  transform-gpu text-[#c6ff33] duration-300 ease-out">Contácto</h1>
-    
-
-            <div class="grid w-full min-w-0 grid-cols-1 gap-8 text-left md:grid-cols-[minmax(0,1fr)_minmax(12rem,18rem)] md:items-start">
-
-                
-
-            <div class="min-w-0 space-y-4 text-left">
-
-                
-
-                <h3 class="text-xl font-bold text-white/75">Información de Contacto</h3>
-                    
-                <div class="space-y-2">
-                    <p class=" titulo-portada mb-6 max-w-full  text-left text-4xl font-bold leading-tight transform-gpu text-white duration-300 ease-out md:text-5xl">
-                   
-
-                    info@esclatfestival.com
-
-                    </p>
-                  
-                
-                </div>
-                </div>
-
-                <!-- Redes sociales -->
-                <div class="min-w-0 space-y-4 text-white/75">
-                <h3 class="text-xl font-bold ">Sígue nuestras redes</h3>
-                <div class="flex flex-wrap gap-8 text-[#c6ff33]">
-                
-                    <X class="  w-10 h-10 hover:scale-125 transition-colors" />       
-                    
-                    <Instagram class="w-10 h-10 hover:scale-125 transition-colors" />
-                    <MessageCircle class="w-10 h-10 hover:scale-125 transition-colors" />
-                        
-                </div>
-            </div>
-            </div>
+            
         </footer>
     </div>
 </template>

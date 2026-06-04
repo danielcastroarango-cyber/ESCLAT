@@ -1,5 +1,6 @@
 <template>
   <div
+    data-site-banner
     class="relative z-[60] w-full overflow-hidden bg-[#c6ff33] py-2 text-black"
     aria-label="ULTIMAS EARLYBIRDS"
   >

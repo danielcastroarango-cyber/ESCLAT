@@ -12,6 +12,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Info from "@/pages/Trabajos/Normas/Info.vue";
 import Lineup from "@/pages/Trabajos/Lineup/lineup.vue";
 import Programacion from "@/pages/Trabajos/programacion/Programacion.vue";
+import Artistas from "@/pages/Trabajos/Lineup/Artistas.vue";
 
 
 export const router = createRouter({
@@ -61,10 +62,10 @@ export const router = createRouter({
       ]
     },
     {
-      path: "/lineup",
-      name: "Lineup",
-      alias: ["/Lineup"],
-      component: Lineup,
+      path: "/Artistas",
+      name: "Artistas",
+      alias: ["/artistas"],
+      component: Artistas,
     },
     {
       path: "/:pathMatch(.*)*",
