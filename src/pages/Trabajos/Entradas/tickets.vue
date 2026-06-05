@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import Footer from '@/components/ui/Footer.vue'
-import NavigatorPrimarius from '@/components/ui/Navegador.vue'
 import Banner from '@/components/ui/Banner.vue'
 
 

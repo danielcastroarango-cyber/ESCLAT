@@ -118,12 +118,12 @@ onUnmounted(() => {
 
       <div
         aria-hidden="true"
-        class="artistas-filter pointer-events-none absolute inset-0 z-[1] bg-black/45"
+        class="artistas-filter pointer-events-none absolute inset-0 z-1 bg-black/45"
         :class="{ 'artistas-filter-hidden': isRevealed }"
       />
       <div
         aria-hidden="true"
-        class="artistas-filter pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-2/3 bg-gradient-to-t from-black via-black/55 to-transparent"
+        class="artistas-filter pointer-events-none absolute inset-x-0 bottom-0 z-1 h-2/3 bg-linear-to-t from-black via-black/55 to-transparent"
         :class="{ 'artistas-filter-hidden': isRevealed }"
       />
 

@@ -236,7 +236,7 @@ onBeforeUnmount(() => {
       >
         <RouterLink to="/tickets" aria-label="Tickets festival">
           <span
-            class=" titulo-portada font-black block text-center text-[clamp(1.75rem,8vw,7.5rem)] uppercase leading-[0.95] tracking-[0.1em] [text-shadow:0_0_12px_rgba(255,255,255,0.55)] group-hover:[text-shadow:0_0_10px_rgba(0,0,0,0.3)] sm:tracking-[0.14em] lg:tracking-[0.18em]"
+            class=" titulo-portada font-black block text-center text-[clamp(1.75rem,8vw,7.5rem)] uppercase leading-[0.95] tracking-widest [text-shadow:0_0_12px_rgba(255,255,255,0.55)] group-hover:[text-shadow:0_0_10px_rgba(0,0,0,0.3)] sm:tracking-[0.14em] lg:tracking-[0.18em]"
           >
             Tickets festival 
           </span>
@@ -259,7 +259,7 @@ onBeforeUnmount(() => {
             :key="artist.name"
             as-child
             variant="outline"
-            class="flex h-72 w-full max-w-52 items-center justify-center overflow-hidden rounded-none border-2 border-black  p-0 text-white hover:-translate-y-1 hover:border-[#c6ff33] bg-[#c6ff33] hover:text-black md:h-[28rem] md:max-w-60"
+            class="flex h-72 w-full max-w-52 items-center justify-center overflow-hidden rounded-none border-2 border-black  p-0 text-white hover:-translate-y-1 hover:border-[#c6ff33] bg-[#c6ff33] hover:text-black md:h-112 md:max-w-60"
           >
             <RouterLink
               to="/Artistas"
@@ -309,7 +309,7 @@ onBeforeUnmount(() => {
       </video>
       <div
         aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-[1] bg-black/75"
+        class="pointer-events-none absolute inset-0 z-1 bg-black/75"
       />
       <div class="relative z-10 flex w-full flex-col items-center justify-center px-6 text-center">
         

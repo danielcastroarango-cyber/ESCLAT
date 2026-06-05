@@ -1,7 +1,7 @@
 <template>
   <div
     data-site-banner
-    class="relative z-[60] w-full overflow-hidden bg-[#c6ff33] py-2 text-black"
+    class="relative z-60 w-full overflow-hidden bg-[#c6ff33] py-2 text-black"
     aria-label="ULTIMAS EARLYBIRDS"
   >
     <div class="flex w-max whitespace-nowrap animate-[earlybirds-marquee_16s_linear_infinite]">
