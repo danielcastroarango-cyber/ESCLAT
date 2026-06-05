@@ -77,13 +77,13 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="artistas-page min-h-screen w-full overflow-hidden bg-black text-white"
+    class="artistas-page min-h-screen w-full overflow-x-hidden overflow-y-auto bg-black text-white"
     @click="revealPage"
   >
     <Banner />
 
     <main
-      class="relative flex min-h-[calc(100vh-5rem)] w-full items-center overflow-hidden px-4 py-16 md:px-10 lg:px-14"
+      class="artistas-main relative flex w-full items-center overflow-x-hidden px-4 py-16 md:px-10 lg:px-14"
       :class="{ 'artists-hover-ready': isHoverEnabled }"
     >
       <div
@@ -164,6 +164,10 @@ onUnmounted(() => {
 
 .artistas-page {
   font-family: 'Neue Montreal', sans-serif;
+}
+
+.artistas-main {
+  min-height: max(calc(100svh - 5rem), 42rem);
 }
 
 .titulo-portada {
