@@ -10,7 +10,6 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 
 import Info from "@/pages/Trabajos/Normas/Info.vue";
-import Lineup from "@/pages/Trabajos/Lineup/lineup.vue";
 import Programacion from "@/pages/Trabajos/programacion/Programacion.vue";
 import Artistas from "@/pages/Trabajos/Lineup/Artistas.vue";
 

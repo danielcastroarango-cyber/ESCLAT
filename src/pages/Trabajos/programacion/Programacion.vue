@@ -3,7 +3,6 @@ import { computed, ref } from 'vue'
 import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
 import { festivalDays } from '@/components/data/Organizacion'
 import Footer from '@/components/ui/Footer.vue'
-import NavigatorPrimarius from '@/components/ui/Navegador.vue'
 import Banner from '@/components/ui/Banner.vue'
 
 type ActiveLevel = 'level1' | 'level2'

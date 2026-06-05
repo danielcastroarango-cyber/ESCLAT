@@ -114,7 +114,7 @@ onUnmounted(() => {
       @click="openMenu"
     >
       <img
-        src="/Imagines/ESCLAT/esclat_simple.png"
+        src="/Imagines/ESCLAT/logo_full.jpg"
         alt=""
         class="menu-trigger-image"
       >
@@ -145,7 +145,7 @@ onUnmounted(() => {
             @click="closeMenu"
           >
             <img
-              src="/Imagines/ESCLAT/esclat_simple.png"
+              src="/Imagines/ESCLAT/logo_full.jpg"
               alt=""
               class="menu-brand-image"
             >
