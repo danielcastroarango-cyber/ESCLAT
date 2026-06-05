@@ -67,10 +67,10 @@ const faqs = [
     <Banner />
     <main class="flex w-full flex-1 flex-col items-center justify-center gap-0 bg-white text-black">
    
-    <section id="Normas" class="relative w-full overflow-hidden bg-black px-4 py-20 md:px-10 lg:px-14">
+    <section id="Normas" class="relative w-full overflow-hidden bg-white px-4 py-20 md:px-10 lg:px-14">
        <div class="flex w-full flex-col gap-15 justify-center items-start">
       <div class="my-8 w-full max-w-350 px-4 text-left md:px-10 lg:px-14">
-        <h1 class="titulo-portada font-black text-7xl md:text-9xl text-white   text-left  ">
+        <h1 class="titulo-portada font-black text-7xl md:text-9xl text-black   text-left  ">
           Normas
         </h1>
         
@@ -96,7 +96,7 @@ const faqs = [
 
 
 
-    <section id="mapa" class="grid min-h-screen w-full grid-cols-1 border-[#c6ff33] border-8 overflow-hidden bg-white text-black lg:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.65fr)]">
+    <section id="mapa" class="grid min-h-screen w-full grid-cols-1 border-[#c6ff33] border-8 overflow-hidden bg-[#c6ff33] text-black lg:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.65fr)]">
       <iframe
         title="Mapa de Las Naves, Valencia"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2599.603068669508!2d-0.34166637408784967!3d39.4591461749516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048f63da49ce1%3A0x37b1bcba9ad9547a!2sLas%20Naves%20%7C%20Centro%20de%20innovaci%C3%B3n%20social%20y%20urbana!5e1!3m2!1ses-419!2ses!4v1778776187665!5m2!1ses-419!2ses" 

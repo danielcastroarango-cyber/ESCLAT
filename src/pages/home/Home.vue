@@ -5,6 +5,35 @@ import Banner from '@/components/ui/Banner.vue'
 import CountdownPopup from '@/components/ui/CountdownPopup.vue'
 import Footer from '@/components/ui/Footer.vue'
 
+type LineupPreviewItem = {
+  name: string
+  image?: string
+  display?: string
+}
+
+const lineupPreviewItems: LineupPreviewItem[] = [
+  {
+    name: 'Funk Tribu',
+    image: '/Imagines/ESCLAT/Funky.png',
+  },
+  {
+    name: 'Sara Landry',
+    image: '/Imagines/ESCLAT/SARALANDRY.png',
+  },
+  {
+    name: 'Mochakk',
+    image: '/Imagines/ESCLAT/MOCHAKK.png',
+  },
+  {
+    name: 'Onlynumbers',
+    image: '/Imagines/ESCLAT/ONLYNUMBERS.png',
+  },
+  {
+    name: 'Próximamente',
+    display: '?',
+  },
+]
+
 const backgroundVideo = ref<HTMLVideoElement | null>(null)
 const videoSection = ref<HTMLElement | null>(null)
 let resumeVideoTimeout: number | undefined
@@ -194,7 +223,7 @@ onBeforeUnmount(() => {
         class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover md:object-contain"
       >
 
-     
+
 
     </section>
 
@@ -215,10 +244,6 @@ onBeforeUnmount(() => {
       </Button>
     </section>
 <section id="lineup" class="relative w-full overflow-hidden bg-black px-4 py-24 text-white md:px-10 lg:px-14">
-      <div
-        aria-hidden="true"
-        class="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_12%_18%,rgba(198,255,51,0.55)_0_1px,transparent_2px),radial-gradient(circle_at_82%_28%,rgba(198,255,51,0.42)_0_1px,transparent_2px),radial-gradient(circle_at_35%_78%,rgba(198,255,51,0.5)_0_1px,transparent_2px)] bg-[length:84px_84px,132px_132px,108px_108px] opacity-75"
-      />
 
       <div class="relative z-10">
         <p class="mb-5 text-sm font-bold uppercase tracking-[0.32em] text-[#c6ff33] md:text-base">
@@ -228,16 +253,31 @@ onBeforeUnmount(() => {
           Artistas confirmados
         </h2>
 
-        <div class="mt-12 grid w-full grid-cols-1 gap-5 md:grid-cols-4">
+        <div class="mt-12 grid w-full grid-cols-1 justify-items-center gap-5 md:grid-cols-3 lg:grid-cols-5">
           <Button
-            v-for="artist in ['Luna Void', 'Noir System', 'Marea Roja', 'Próximamente']"
-            :key="artist"
+            v-for="artist in lineupPreviewItems"
+            :key="artist.name"
             as-child
             variant="outline"
-            class="h-auto rounded-none border-2 border-[#c6ff33] bg-transparent px-5 py-6 text-xl font-bold uppercase tracking-[0.12em] text-white shadow-[6px_6px_0_#c6ff33] hover:-translate-y-1 hover:border-[#c6ff33] hover:bg-[#c6ff33] hover:text-black hover:shadow-[6px_6px_0_#fff] md:text-2xl"
+            class="flex h-72 w-full max-w-52 items-center justify-center overflow-hidden rounded-none border-2 border-black  p-0 text-white hover:-translate-y-1 hover:border-[#c6ff33] bg-[#c6ff33] hover:text-black md:h-[28rem] md:max-w-60"
           >
-            <RouterLink to="/lineup">
-              {{ artist }}
+            <RouterLink
+              to="/Artistas"
+              :aria-label="`Ver ${artist.name} en lineup`"
+              class="flex h-full w-full items-center justify-center"
+            >
+              <img
+                v-if="artist.image"
+                :src="artist.image"
+                :alt="artist.name"
+                class="h-full w-full object-cover  transition-transform duration-300 hover:scale-105 "
+              >
+              <span
+                v-else
+                class="titulo-portada text-[clamp(5rem,14vw,10rem)] font-black leading-none"
+              >
+                {{ artist.display }}
+              </span>
             </RouterLink>
           </Button>
         </div>

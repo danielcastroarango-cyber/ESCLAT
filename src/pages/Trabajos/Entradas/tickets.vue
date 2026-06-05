@@ -95,13 +95,13 @@ const eventDetails = [
         </div>
       </section>
 
-       <section id="about" class="relative bg-white z-10 w-full px-4 pb-28 pt-8 text-left md:px-10 lg:px-14 mt-20">
+       <section id="about" class="relative bg-black z-10 w-full px-4 pb-28 pt-8 text-left md:px-10 lg:px-14 mt-20">
      <p class="text-sm font-bold uppercase tracking-[0.32em] mb-5 text-[#c6ff33] md:text-base">
             sobre esclat
           </p>
-      <h2 class="titulo-portada  text-6xl font-black leading-none text-black md:text-7xl lg:text-6xl">Una noche de ruptura</h2>
+      <h2 class="titulo-portada  text-6xl font-black leading-none text-white md:text-7xl lg:text-6xl">Una noche de ruptura</h2>
 
-      <p class="mt-10 max-w-8xl text-3xl font-normal leading-relaxed text-black/85 ">
+      <p class="mt-10 max-w-8xl text-3xl font-normal leading-relaxed text-white/85 ">
        ESCLAT se transforma en un refugio para quienes buscan desaparecer de las normas y encontrarse de verdad. Un lugar donde la noche no exige máscaras, donde cada cuerpo, cada look y cada forma de sentir tiene cabida. Aquí no existe el juicio: existe la LIBERTAD. La estética mezcla la energía de los 90, el imaginario industrial berlinés y la irreverencia valenciana. Luces frías, neón, metal, humo, trance y caos bonito. Un universo donde lo underground se convierte en hogar y donde lo diferente no solo se acepta: se celebra. 
 
       </p>
@@ -114,10 +114,10 @@ const eventDetails = [
           <h3 class="titulo-portada text-3xl font-black leading-none text-[#c6ff33] md:text-4xl">
             {{ detail.title }}
           </h3>
-          <p class="titulo-portada mt-4 text-2xl font-bold leading-none text-black md:text-3xl">
+          <p class="titulo-portada mt-4 text-2xl font-bold leading-none text-white md:text-3xl">
             {{ detail.value }}
           </p>
-          <p class="mt-5 text-lg font-normal leading-relaxed md:text-xl">
+          <p class="mt-5 text-lg font-normal text-white/85 leading-relaxed md:text-xl">
             {{ detail.text }}
           </p>
         </div>
@@ -125,8 +125,8 @@ const eventDetails = [
     </section>
 
       
-     <section id="mapa" class="relative z-10 w-full px-4 py-20 bg-white text-black md:px-10 lg:px-14">
-      <div class="grid min-h-[82vh] w-full grid-cols-1 overflow-hidden rounded-none border-5 border-[#c6ff33] bg-white text-black shadow-[6px_6px_0_#c6ff33] transition-all duration-300 ease-out hover:-translate-y-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.65fr)]">
+     <section id="mapa" class="relative z-10 w-full px-4 py-20 bg-black text-black md:px-10 lg:px-14">
+      <div class="grid min-h-[82vh] w-full grid-cols-1 overflow-hidden rounded-none border-5 border-[#c6ff33] bg-[#c6ff33] text-black  transition-all duration-300 ease-out hover:-translate-y-1 lg:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.65fr)]">
       <iframe
         title="Mapa de Las Naves, Valencia"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2599.603068669508!2d-0.34166637408784967!3d39.4591461749516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048f63da49ce1%3A0x37b1bcba9ad9547a!2sLas%20Naves%20%7C%20Centro%20de%20innovaci%C3%B3n%20social%20y%20urbana!5e1!3m2!1ses-419!2ses!4v1778776187665!5m2!1ses-419!2ses" 
