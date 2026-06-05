@@ -3,7 +3,7 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 const visible = ref(true)
 const now = ref(new Date())
-const targetDate = new Date('2026-06-05T00:00:00')
+const targetDate = new Date('2026-06-08T00:00:00')
 
 let interval: ReturnType<typeof setInterval>
 

@@ -6,44 +6,51 @@ const artistStories = [
   {
     src: '/Imagines/ESCLAT/ESCLAT_INSTAGRAM_STORY.jpg',
     alt: 'ESCLAT Instagram story 1',
-    title: 'Titulo 01',
-    subtitle: 'Subtitulo del artista',
-    description: 'Descripcion breve del artista, su estilo y el momento que trae al festival.',
+    title: 'ONLY NUMBERS',
+    subtitle: 'HARD TECHNO',
+    description: 'DJ y productor nacido en Francia y afincado en Chequia: hard techno euforico, percusivo y directo, con energia de rave contemporanea.',
   },
   {
     src: '/Imagines/ESCLAT/ESCLAT_INSTAGRAM_STORY_2.jpg',
     alt: 'ESCLAT Instagram story 2',
-    title: 'Titulo 02',
-    subtitle: 'Subtitulo del artista',
-    description: 'Descripcion breve del artista, su estilo y el momento que trae al festival.',
+    title: 'MOCHAKK',
+    subtitle: 'HOUSE',
+    description: 'Pedro Maia, DJ y productor brasileño, lleva el house y el tech house a un terreno fisico, groovero y muy expresivo.',
   },
   {
     src: '/Imagines/ESCLAT/ESCLAT_INSTAGRAM_STORY_3.jpg',
     alt: 'ESCLAT Instagram story 3',
-    title: 'Titulo 03',
-    subtitle: 'Subtitulo del artista',
-    description: 'Descripcion breve del artista, su estilo y el momento que trae al festival.',
+    title: 'SARA LANDRY',
+    subtitle: 'HARD TECHNO',
+    description: 'DJ, productora y fundadora de sello estadounidense: hard techno oscuro, industrial y contundente, construido desde una vision propia.',
   },
   {
     src: '/Imagines/ESCLAT/ESCLAT_INSTAGRAM_STORY_4.jpg',
     alt: 'ESCLAT Instagram story 4',
-    title: 'Titulo 04',
-    subtitle: 'Subtitulo del artista',
-    description: 'Descripcion breve del artista, su estilo y el momento que trae al festival.',
+    title: 'KOBOSIL',
+    subtitle: 'INDUSTRIAL TECHNO',
+    description: 'Productor y DJ aleman criado en Berlin-Neukolln; techno profundo, rapido y agresivo atravesado por EBM, ruido e industrial.',
   },
   {
     src: '/Imagines/ESCLAT/ESCLAT_INSTAGRAM_STORY_5.jpg',
     alt: 'ESCLAT Instagram story 5',
-    title: 'Titulo 05',
-    subtitle: 'Subtitulo del artista',
-    description: 'Descripcion breve del artista, su estilo y el momento que trae al festival.',
+    title: 'CHARLIE SPARKS',
+    subtitle: 'ACID TECHNO',
+    description: 'DJ y productor britanico de alto voltaje: mezcla acid, industrial, rave y grooves de psytrance en techno frontal y acelerado.',
   },
    {
     src: '/Imagines/ESCLAT/ESCLAT_INSTAGRAM_STORY_6.jpg',
     alt: 'ESCLAT Instagram story 6',
-    title: 'Titulo 06',
-    subtitle: 'Subtitulo del artista',
-    description: 'Descripcion breve del artista, su estilo y el momento que trae al festival.',
+    title: 'FUNKY TRIBU',
+    subtitle: 'NU-TRANCE',
+    description: 'Productor y DJ colombiano afincado en Berlin, figura del nu-trance: grooves hipnoticos y energia club retrofuturista.',
+  },
+  {
+    src: '/Imagines/ESCLAT/ESCLAT_INSTAGRAM_STORY_7.jpg',
+    alt: 'ESCLAT Instagram story 7',
+    title: 'AMELIE LENS',
+    subtitle: 'TECHNO MINIMAL',
+    description: 'DJ y productora belga de Amberes, al frente de Lenske y EXHALE: techno hipnotico y atmosferico con energia rave y alcance global.',
   },
 ]
 
@@ -111,12 +118,12 @@ onUnmounted(() => {
 
       <div
         aria-hidden="true"
-        class="artistas-filter pointer-events-none absolute inset-0 z-[1] bg-black/45"
+        class="artistas-filter pointer-events-none absolute inset-0 z-1 bg-black/45"
         :class="{ 'artistas-filter-hidden': isRevealed }"
       />
       <div
         aria-hidden="true"
-        class="artistas-filter pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-2/3 bg-gradient-to-t from-black via-black/55 to-transparent"
+        class="artistas-filter pointer-events-none absolute inset-x-0 bottom-0 z-1 h-2/3 bg-linear-to-t from-black via-black/55 to-transparent"
         :class="{ 'artistas-filter-hidden': isRevealed }"
       />
 
@@ -172,8 +179,8 @@ onUnmounted(() => {
 .story-slide {
   position: relative;
   flex: 0 0 auto;
-  width: clamp(18rem, 32vw, 34rem);
   height: 100%;
+  width: min(26vw, 56.25vh);
   overflow: hidden;
 }
 
@@ -276,7 +283,7 @@ onUnmounted(() => {
 
 @media (max-width: 640px) {
   .story-slide {
-    width: 82vw;
+    width: min(82vw, 56.25vh);
   }
 
   .story-title {
