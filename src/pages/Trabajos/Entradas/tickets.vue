@@ -55,7 +55,7 @@ const eventDetails = [
         <div class="mx-auto flex w-full max-w-384 flex-col items-center px-2 text-center">
           <div class="flex max-w-full items-center justify-center gap-2 overflow-visible p-8 sm:gap-5 md:gap-8 lg:gap-10 xl:gap-12">
             <img
-              src="/Imagines/ESCLAT/ESCLATLOGO_Verde.png"
+              src="/Imagines/ESCLAT/esclat.png"
               alt="ESCLAT"
               class="h-auto w-[min(88vw,64rem)] shrink-0 "
             >

@@ -239,7 +239,7 @@ onBeforeUnmount(() => {
       <img
         :src="homeHeroImages[currentHomeHeroImageIndex]"
         alt=""
-        class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover md:object-contain"
+        class="pointer-events-none absolute inset-0 z-0 h-full w-full  md:object-contain"
       >
 
 
