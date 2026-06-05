@@ -34,14 +34,28 @@ const lineupPreviewItems: LineupPreviewItem[] = [
   },
 ]
 
+const homeHeroImages = [
+  '/Imagines/ESCLAT/Header_Portada.png',
+  '/Imagines/ESCLAT/Header_Portada_2.png',
+  '/Imagines/ESCLAT/Header_Portada_3.png',
+  '/Imagines/ESCLAT/Header_Portada_4.png',
+  '/Imagines/ESCLAT/Header_Portada_5.png',
+]
+
+const currentHomeHeroImageIndex = ref(0)
 const backgroundVideo = ref<HTMLVideoElement | null>(null)
 const videoSection = ref<HTMLElement | null>(null)
+let homeHeroImageInterval: number | undefined
 let resumeVideoTimeout: number | undefined
 let videoWatchdogInterval: number | undefined
 let videoVisibilityObserver: IntersectionObserver | undefined
 let isVideoSectionVisible = true
 let lastVideoTime = 0
 let stuckCheckCount = 0
+
+function changeHomeHeroImage() {
+  currentHomeHeroImageIndex.value = (currentHomeHeroImageIndex.value + 1) % homeHeroImages.length
+}
 
 function queueBackgroundVideoPlay(delay = 250, shouldReload = false) {
   if (resumeVideoTimeout !== undefined) {
@@ -183,6 +197,7 @@ onMounted(() => {
   }
 
   queueBackgroundVideoPlay()
+  homeHeroImageInterval = window.setInterval(changeHomeHeroImage, 5000)
   videoWatchdogInterval = window.setInterval(checkBackgroundVideoState, 1500)
   document.addEventListener('visibilitychange', handlePageVisibilityChange)
   window.addEventListener('pageshow', handlePageVisibilityChange)
@@ -192,6 +207,10 @@ onMounted(() => {
 onBeforeUnmount(() => {
   if (resumeVideoTimeout !== undefined) {
     window.clearTimeout(resumeVideoTimeout)
+  }
+
+  if (homeHeroImageInterval !== undefined) {
+    window.clearInterval(homeHeroImageInterval)
   }
 
   if (videoWatchdogInterval !== undefined) {
@@ -216,9 +235,9 @@ onBeforeUnmount(() => {
     <section
       id="home"
       class="relative flex min-h-[78vh] w-full items-center bg-white justify-center overflow-visible px-4 pb-40 pt-20 text-white md:min-h-[86vh] md:pb-48 lg:min-h-screen"
-    >
+      >
       <img
-        src="/Imagines/ESCLAT/Header_Portada_2.1.png"
+        :src="homeHeroImages[currentHomeHeroImageIndex]"
         alt=""
         class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover md:object-contain"
       >

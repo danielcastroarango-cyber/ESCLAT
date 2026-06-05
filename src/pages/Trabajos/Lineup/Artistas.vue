@@ -45,6 +45,13 @@ const artistStories = [
     subtitle: 'NU-TRANCE',
     description: 'Productor y DJ colombiano afincado en Berlin, figura del nu-trance: grooves hipnoticos y energia club retrofuturista.',
   },
+  {
+    src: '/Imagines/ESCLAT/ESCLAT_INSTAGRAM_STORY_7.jpg',
+    alt: 'ESCLAT Instagram story 7',
+    title: 'AMELIE LENS',
+    subtitle: 'TECHNO MINIMAL',
+    description: 'DJ y productora belga de Amberes, al frente de Lenske y EXHALE: techno hipnotico y atmosferico con energia rave y alcance global.',
+  },
 ]
 
 const marqueeStories = [...artistStories, ...artistStories]
