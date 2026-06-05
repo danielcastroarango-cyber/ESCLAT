@@ -172,8 +172,8 @@ onUnmounted(() => {
 .story-slide {
   position: relative;
   flex: 0 0 auto;
-  width: clamp(18rem, 32vw, 34rem);
   height: 100%;
+  width: min(26vw, 56.25vh);
   overflow: hidden;
 }
 
@@ -276,7 +276,7 @@ onUnmounted(() => {
 
 @media (max-width: 640px) {
   .story-slide {
-    width: 82vw;
+    width: min(82vw, 56.25vh);
   }
 
   .story-title {

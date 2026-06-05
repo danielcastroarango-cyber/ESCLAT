@@ -1,9 +1,179 @@
 ﻿<script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { Button } from '@/components/ui/button'
 import Banner from '@/components/ui/Banner.vue'
 import CountdownPopup from '@/components/ui/CountdownPopup.vue'
 import Footer from '@/components/ui/Footer.vue'
-import NavigatorPrimarius from '@/components/ui/Navegador.vue'
+
+const backgroundVideo = ref<HTMLVideoElement | null>(null)
+const videoSection = ref<HTMLElement | null>(null)
+let resumeVideoTimeout: number | undefined
+let videoWatchdogInterval: number | undefined
+let videoVisibilityObserver: IntersectionObserver | undefined
+let isVideoSectionVisible = true
+let lastVideoTime = 0
+let stuckCheckCount = 0
+
+function queueBackgroundVideoPlay(delay = 250, shouldReload = false) {
+  if (resumeVideoTimeout !== undefined) {
+    window.clearTimeout(resumeVideoTimeout)
+  }
+
+  resumeVideoTimeout = window.setTimeout(() => {
+    resumeVideoTimeout = undefined
+    playBackgroundVideo(shouldReload)
+  }, delay)
+}
+
+function resetBackgroundVideoMonitor() {
+  const video = backgroundVideo.value
+
+  lastVideoTime = video?.currentTime ?? 0
+  stuckCheckCount = 0
+}
+
+function playBackgroundVideo(shouldReload = false) {
+  const video = backgroundVideo.value
+
+  if (!video || document.hidden || !isVideoSectionVisible) return
+
+  video.muted = true
+  video.defaultMuted = true
+  video.playsInline = true
+
+  if (shouldReload && video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
+    video.load()
+  }
+
+  if (video.ended || (Number.isFinite(video.duration) && video.duration - video.currentTime < 0.2)) {
+    video.currentTime = 0
+  }
+
+  video
+    .play()
+    .then(resetBackgroundVideoMonitor)
+    .catch(() => {
+      queueBackgroundVideoPlay(1000)
+    })
+}
+
+function checkBackgroundVideoState() {
+  const video = backgroundVideo.value
+
+  if (!video || document.hidden || !isVideoSectionVisible) return
+
+  if (video.paused || video.ended) {
+    queueBackgroundVideoPlay()
+    return
+  }
+
+  if (video.readyState < HTMLMediaElement.HAVE_CURRENT_DATA) {
+    queueBackgroundVideoPlay(500, true)
+    return
+  }
+
+  if (Number.isFinite(video.duration) && video.duration - video.currentTime < 0.2) {
+    video.currentTime = 0
+    queueBackgroundVideoPlay()
+    return
+  }
+
+  if (Math.abs(video.currentTime - lastVideoTime) < 0.01) {
+    stuckCheckCount += 1
+  } else {
+    stuckCheckCount = 0
+  }
+
+  lastVideoTime = video.currentTime
+
+  if (stuckCheckCount >= 3) {
+    stuckCheckCount = 0
+
+    try {
+      video.currentTime = Number.isFinite(video.duration) && video.currentTime < video.duration - 0.2
+        ? video.currentTime + 0.05
+        : 0
+    } catch {
+      video.load()
+    }
+
+    queueBackgroundVideoPlay()
+  }
+}
+
+function handleBackgroundVideoPause() {
+  if (!document.hidden && isVideoSectionVisible) {
+    queueBackgroundVideoPlay()
+  }
+}
+
+function handleBackgroundVideoCanPlay() {
+  playBackgroundVideo()
+}
+
+function handleBackgroundVideoEnded() {
+  const video = backgroundVideo.value
+
+  if (video) {
+    video.currentTime = 0
+  }
+
+  queueBackgroundVideoPlay(0)
+}
+
+function handleBackgroundVideoStall() {
+  queueBackgroundVideoPlay(600)
+}
+
+function handleBackgroundVideoError() {
+  queueBackgroundVideoPlay(1200, true)
+}
+
+function handlePageVisibilityChange() {
+  if (!document.hidden) {
+    resetBackgroundVideoMonitor()
+    queueBackgroundVideoPlay()
+  }
+}
+
+onMounted(() => {
+  if ('IntersectionObserver' in window && videoSection.value) {
+    videoVisibilityObserver = new IntersectionObserver(
+      ([entry]) => {
+        isVideoSectionVisible = entry?.isIntersecting ?? true
+
+        if (isVideoSectionVisible) {
+          resetBackgroundVideoMonitor()
+          queueBackgroundVideoPlay()
+        }
+      },
+      { threshold: 0.01 },
+    )
+
+    videoVisibilityObserver.observe(videoSection.value)
+  }
+
+  queueBackgroundVideoPlay()
+  videoWatchdogInterval = window.setInterval(checkBackgroundVideoState, 1500)
+  document.addEventListener('visibilitychange', handlePageVisibilityChange)
+  window.addEventListener('pageshow', handlePageVisibilityChange)
+  window.addEventListener('focus', handlePageVisibilityChange)
+})
+
+onBeforeUnmount(() => {
+  if (resumeVideoTimeout !== undefined) {
+    window.clearTimeout(resumeVideoTimeout)
+  }
+
+  if (videoWatchdogInterval !== undefined) {
+    window.clearInterval(videoWatchdogInterval)
+  }
+
+  videoVisibilityObserver?.disconnect()
+  document.removeEventListener('visibilitychange', handlePageVisibilityChange)
+  window.removeEventListener('pageshow', handlePageVisibilityChange)
+  window.removeEventListener('focus', handlePageVisibilityChange)
+})
 </script>
 
 <template>
@@ -74,15 +244,36 @@ import NavigatorPrimarius from '@/components/ui/Navegador.vue'
       </div>
     </section>
 
-    <section id="video" class="relative -mb-12 flex min-h-[80vh] w-full items-center justify-center overflow-hidden py-10 lg:min-h-screen"> 
-      <img
-        src="/Imagines/ESCLAT/Festival%202.webp"
-        alt=""
-        class="absolute inset-0 z-0 h-full w-full object-cover"
+    <section ref="videoSection" id="video" class="relative -mb-12 flex min-h-[80vh] w-full items-center justify-center overflow-hidden py-10 lg:min-h-screen">
+      <video
+        ref="backgroundVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline="true"
+        preload="auto"
+        poster="/Imagines/ESCLAT/Festival%202.webp"
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover"
+        @canplay="handleBackgroundVideoCanPlay"
+        @loadeddata="handleBackgroundVideoCanPlay"
+        @playing="resetBackgroundVideoMonitor"
+        @pause="handleBackgroundVideoPause"
+        @ended="handleBackgroundVideoEnded"
+        @waiting="handleBackgroundVideoStall"
+        @stalled="handleBackgroundVideoStall"
+        @error="handleBackgroundVideoError"
       >
+        <source src="/Imagines/ESCLAT/VIDEO_WEB.mp4" type="video/mp4">
+      </video>
+      <div
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-0 z-[1] bg-black/75"
+      />
       <div class="relative z-10 flex w-full flex-col items-center justify-center px-6 text-center">
         
-        <p class="w-[92vw] max-w-none text-center text-2xl font-medium leading-relaxed text-white md:text-4xl lg:w-[94vw] lg:text-5xl">
+        <p class="w-[92vw] max-w-none text-center text-2xl font-bold leading-relaxed text-[#c6ff33]  md:text-4xl lg:w-[94vw] lg:text-5xl">
           Un lugar donde la noche no exige máscaras, donde cada cuerpo, cada look y cada forma de sentir tiene cabida. Aquí no existe el juicio: existe la LIBERTAD. La estética mezcla la energía de los 90, el imaginario industrial berlinés y la irreverencia valenciana.
         </p>
       </div>
